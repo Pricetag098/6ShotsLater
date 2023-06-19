@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class BuoyantObject : MonoBehaviour
 {
-    [SerializeField] float noiseFreq, noiseAmplitude;
-
+    public float buoyantForce;
+    [SerializeField] NoiseMap noiseMap;
+    [SerializeField] Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,11 +15,15 @@ public class BuoyantObject : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Vector3 pos = transform.position;
-        Vector2 noiseCoord = new Vector2(pos.x,pos.z) * noiseFreq;
-        pos.y = Mathf.PerlinNoise(noiseCoord.x,noiseCoord.y) * noiseAmplitude;
-        transform.position = pos;
+        if(transform.position.y < noiseMap.SampleNoise(transform.position))
+        {
+            float force = buoyantForce * math.clamp((noiseMap.SampleNoise(transform.position) - transform.position.y), 0, float.PositiveInfinity);
+            //Debug.Log(force);
+            //rb.AddForce(Vector3.up * force);
+
+        }
+        transform.position = new Vector3(transform.position.x, noiseMap.SampleNoise(transform.position),transform.position.z);
     }
 }
