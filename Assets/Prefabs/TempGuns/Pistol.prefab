@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2404308944434217806}
   - component: {fileID: 2404308944434217807}
   - component: {fileID: 2404308944434217804}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2404308944622447318}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 2404308944989935665}
   - component: {fileID: 2404308944989935664}
   - component: {fileID: 2404308944989935675}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 2404308945781480017}
   - component: {fileID: 2404308945781480022}
   - component: {fileID: 2404308945781480023}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShootSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 2404308946184871683}
   - component: {fileID: 2404308946184871680}
   - component: {fileID: 2404308946184871681}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EmptySound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -728,6 +728,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b2bd09aac8c29b743a1a1e3020533f56, type: 2}
+    - target: {fileID: 823518484722769854, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251692306063983481, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322366961244537629, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126645427204867295, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574221072450496467, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3479887589158604856, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -776,18 +796,74 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b2bd09aac8c29b743a1a1e3020533f56, type: 2}
+    - target: {fileID: 4067688416956987538, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4251639939196160642, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
       propertyPath: m_Name
       value: Revolver_38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251639939196160642, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290044398174303727, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401616700782642609, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830821576920546437, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910424521869699117, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283210416892873817, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5883451077760478177, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dc96ff997615bbe44a819e7527cd6f07, type: 2}
+    - target: {fileID: 6144262622285201393, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7108768342010190462, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b2bd09aac8c29b743a1a1e3020533f56, type: 2}
+    - target: {fileID: 7138431625483787706, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7213870712213406722, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256084006081406774, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686512236413832653, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790528653416127637, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863450562539572909, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20cb7e457f3d4a74db29fe098b29de99, type: 3}
 --- !u!4 &401581306453479988 stripped

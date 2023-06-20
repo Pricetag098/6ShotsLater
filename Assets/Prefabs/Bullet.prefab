@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cacba573e8b21458387897685b4ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  despawnDelay: 1
 --- !u!135 &1761555308508875206
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -125,9 +126,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!96 &5051714704658136712
 TrailRenderer:
   serializedVersion: 2
@@ -170,7 +171,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: 0.1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.05
@@ -179,13 +180,13 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
+        value: 0.67987806
+        inSlope: 1.4353856
+        outSlope: 1.4353856
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0.089208625
       - serializedVersion: 3
         time: 1
         value: 0
@@ -233,6 +234,6 @@ TrailRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0.1
+  m_MinVertexDistance: 0
   m_Autodestruct: 0
   m_Emitting: 1
