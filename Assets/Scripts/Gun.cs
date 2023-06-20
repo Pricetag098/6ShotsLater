@@ -17,6 +17,10 @@ public class Gun : MonoBehaviour
     Rigidbody body;
     [SerializeField]Vector3 recoilForce;
     XRGrabInteractable interactable;
+    [SerializeField] float shootHapticDuration = .1f;
+    [Range(0,1)] [SerializeField] float shootHapticStrength = 1;
+    [SerializeField] float reloadHapticDuration = .1f;
+    [Range(0, 1)][SerializeField] float reloadHapticStrength = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,7 +59,7 @@ public class Gun : MonoBehaviour
                 }
                 ammoLeft--;
                 fireTimer = fireCoolDown;
-                Debug.Log(interactable.firstInteractorSelecting);
+                interactable.firstInteractorSelecting.transform.GetComponent<ActionBasedController>().SendHapticImpulse(shootHapticStrength,0.1f);
                 //.transform.GetComponent<XRController>().SendHapticImpulse(1, 0.1f);
                 body.AddForce(transform.up * recoilForce.y + transform.forward * recoilForce.z + transform.right * recoilForce.x);
                 //play gun sound / fx
@@ -74,10 +78,12 @@ public class Gun : MonoBehaviour
             return;
         reloading = true;
         reloadTimer = 0;
+        interactable.firstInteractorSelecting.transform.GetComponent<ActionBasedController>().SendHapticImpulse(reloadHapticStrength, reloadHapticDuration);
     }
     void Reload()
     {
         ammoLeft = maxAmmo;
         reloading = false;
+        
     }
 }
