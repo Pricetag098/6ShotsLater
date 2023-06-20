@@ -6,6 +6,7 @@ public class ZombieSoundManager : MonoBehaviour
 {
     [SerializeField] SoundPlayer footstepSounds;
     [SerializeField] SoundPlayer voiceMovementSounds;
+    [SerializeField] SoundPlayer voiceDeathSounds;
 
 
     public void PlayFootstep()
@@ -17,6 +18,14 @@ public class ZombieSoundManager : MonoBehaviour
     {
         voiceMovementSounds.Play();
     }
+
+    public void PlayDeathVoice()
+    {
+        voiceDeathSounds.Play();
+    }
+
+
+
 
 
 

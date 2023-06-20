@@ -1048,6 +1048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footstepSounds: {fileID: 4478923799053198479}
   voiceMovementSounds: {fileID: 8994587354630266346}
+  voiceDeathSounds: {fileID: 3575135858983911853}
 --- !u!1 &3922066216657297691
 GameObject:
   m_ObjectHideFlags: 0
