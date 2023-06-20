@@ -29,7 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9038220619577060647}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9038220618910904056
 GameObject:
@@ -62,7 +62,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9038220619577060647}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &9038220618910903941
 AudioSource:
@@ -75,7 +75,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -85,7 +85,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 40
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -120,7 +120,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -173,7 +173,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playOnAwake: 0
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 4cb8ea8465e1ced488ff92f1a60154e0, type: 3}
+  - {fileID: 8300000, guid: 10e3971424b3a954997400542a794039, type: 3}
+  - {fileID: 8300000, guid: 2d8b9a171abdece4abb93773e7fe5db7, type: 3}
   pitchRange: 0
   basePitch: 1
 --- !u!1 &9038220618961223924
@@ -207,7 +210,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9038220619577060647}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &9038220618961223921
 AudioSource:
@@ -220,7 +223,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -230,7 +233,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 40
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -318,7 +321,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playOnAwake: 0
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 3f2d4668dfea0e144856c24da88dd5cd, type: 3}
+  - {fileID: 8300000, guid: be34156c5fc609e4bbcdd43a122bfdbb, type: 3}
   pitchRange: 0
   basePitch: 1
 --- !u!1 &9038220619401358790
@@ -352,7 +357,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9038220619577060647}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &9038220619401358787
 AudioSource:
@@ -365,7 +370,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -375,7 +380,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 40
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -463,7 +468,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playOnAwake: 0
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: c7e1d742082935c448c9fdcadab10cfa, type: 3}
   pitchRange: 0
   basePitch: 1
 --- !u!1 &9038220619577060637
@@ -500,11 +506,11 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1180326271367838632}
+  - {fileID: 871028541124636088}
   - {fileID: 9038220618673876805}
   - {fileID: 9038220618910903943}
   - {fileID: 9038220619401358789}
   - {fileID: 9038220618961223923}
-  - {fileID: 871028541124636088}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -720,7 +726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7858616119799421281, guid: 826edcfa82c08e540ac6ae656e12594d, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7858616119799421281, guid: 826edcfa82c08e540ac6ae656e12594d, type: 3}
       propertyPath: m_LocalScale.x
