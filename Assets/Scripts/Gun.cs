@@ -6,6 +6,7 @@ using UnityEngine.InputSystem.XR.Haptics;
 using UnityEngine.XR.Interaction.Toolkit;
 public class Gun : MonoBehaviour
 {
+    [SerializeField] float damage = 10;
     ObjectPooler pooler;
     [SerializeField] float bulletSpeed = 100,bulletSpreadDegrees = 0;
     [SerializeField] int shotsPerFiring = 1;
@@ -56,11 +57,11 @@ public class Gun : MonoBehaviour
 
                     Vector2 randVal = Random.insideUnitCircle * bulletSpreadDegrees;
                     Vector3 dir = Quaternion.Euler(randVal.x, randVal.y, 0) * transform.forward;
-                    b.Shoot(dir * bulletSpeed, origin.position);
+                    b.Shoot(dir * bulletSpeed, origin.position, damage);
                 }
                 ammoLeft--;
                 fireTimer = fireCoolDown;
-                interactable.firstInteractorSelecting.transform.GetComponent<ActionBasedController>().SendHapticImpulse(shootHapticStrength,0.1f);
+                interactable.firstInteractorSelecting.transform.GetComponent<ActionBasedController>().SendHapticImpulse(shootHapticStrength,shootHapticDuration);
                 //.transform.GetComponent<XRController>().SendHapticImpulse(1, 0.1f);
                 body.AddForce(transform.up * recoilForce.y + transform.forward * recoilForce.z + transform.right * recoilForce.x);
                 //play gun sound / fx

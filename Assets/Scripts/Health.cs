@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    public float health;
+    public float maxHealth = 100;
     // Start is called before the first frame update
     void Start()
     {
-        
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -17,6 +19,16 @@ public class Health : MonoBehaviour
     }
     public void TakeDmg(float dmg)
     {
-
+        health-=dmg;
+        if(health <= 0)
+		{
+            Die();
+		}
     }
+
+    void Die()
+	{
+        //do die stuff
+        Debug.Log("dead",gameObject);
+	}
 }
