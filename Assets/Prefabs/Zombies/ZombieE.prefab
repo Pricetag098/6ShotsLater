@@ -1038,7 +1038,7 @@ GameObject:
   - component: {fileID: 8353393092032443382}
   - component: {fileID: 6824149122452902627}
   m_Layer: 0
-  m_Name: ZombieE (Todo)
+  m_Name: ZombieE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
