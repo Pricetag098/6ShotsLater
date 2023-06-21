@@ -61,6 +61,6 @@ public class Bullet : MonoBehaviour
         col.enabled = false;
         mr.enabled = false;
         rb.isKinematic = true;
-
+        
     }
 }

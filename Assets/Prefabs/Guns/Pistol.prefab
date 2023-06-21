@@ -299,12 +299,12 @@ MonoBehaviour:
   bulletSpreadDegrees: 0
   shotsPerFiring: 1
   ammoLeft: 0
-  maxAmmo: 10
+  maxAmmo: 6
   fireCoolDown: 0.1
   reloadDuration: 1
   origin: {fileID: 2404308944622447318}
   recoilForce: {x: 0, y: 200, z: -200}
-  shootHapticDuration: 0.1
+  shootHapticDuration: 0.3
   shootHapticStrength: 1
   reloadHapticDuration: 1
   reloadHapticStrength: 0.363

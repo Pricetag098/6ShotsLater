@@ -637,8 +637,8 @@ MonoBehaviour:
   bulletSpreadDegrees: 10
   shotsPerFiring: 20
   ammoLeft: 0
-  maxAmmo: 10
-  fireCoolDown: 0.5
+  maxAmmo: 2
+  fireCoolDown: 0.1
   reloadDuration: 1
   origin: {fileID: 9038220618673876805}
   recoilForce: {x: 0, y: 300, z: -300}
