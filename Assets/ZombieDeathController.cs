@@ -6,7 +6,7 @@ public class ZombieDeathController : MonoBehaviour
 {
     Health health;
     Animator animator;
-    [SerializeField] string Deathtrigger = "Death";
+    [SerializeField] string Deathtrigger = "Deatht";
     // Start is called before the first frame update
     void Start()
     {
