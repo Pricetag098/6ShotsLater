@@ -944,6 +944,7 @@ GameObject:
   - component: {fileID: 8357758447137940255}
   - component: {fileID: 712310305697551927}
   - component: {fileID: 5870354786139711705}
+  - component: {fileID: -2317996226667171222}
   m_Layer: 0
   m_Name: ZombieB
   m_TagString: Untagged
@@ -1000,6 +1001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c7b4b9bd7baf74caa98e548007bd0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 100
 --- !u!114 &5870354786139711705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1015,6 +1018,19 @@ MonoBehaviour:
   footstepSounds: {fileID: 3597364763530179775}
   voiceMovementSounds: {fileID: 7795390100856625205}
   voiceDeathSounds: {fileID: 8798678554765283162}
+--- !u!114 &-2317996226667171222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3339214059942765535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd77b8b649aefc44391dd2a51371a94f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Deathtrigger: Death
 --- !u!1 &3459712193117727075
 GameObject:
   m_ObjectHideFlags: 0
