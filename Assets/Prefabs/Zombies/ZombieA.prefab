@@ -917,6 +917,7 @@ GameObject:
   - component: {fileID: 9204370024322789702}
   - component: {fileID: 2668123564082653549}
   - component: {fileID: 6158618847723128754}
+  - component: {fileID: 8606164327780804401}
   m_Layer: 0
   m_Name: ZombieA
   m_TagString: Untagged
@@ -973,6 +974,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c7b4b9bd7baf74caa98e548007bd0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 100
 --- !u!114 &6158618847723128754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -988,6 +991,19 @@ MonoBehaviour:
   footstepSounds: {fileID: 2081920849997859543}
   voiceMovementSounds: {fileID: 6945460530162395875}
   voiceDeathSounds: {fileID: 4249761531027373858}
+--- !u!114 &8606164327780804401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2456574771288011142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd77b8b649aefc44391dd2a51371a94f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Deathtrigger: Death
 --- !u!1 &2889164606648399020
 GameObject:
   m_ObjectHideFlags: 0
