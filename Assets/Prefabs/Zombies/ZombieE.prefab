@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 624787629489149627}
   - component: {fileID: 2548554988830370792}
+  - component: {fileID: 8401457617090965715}
   m_Layer: 0
   m_Name: mixamorig:LeftUpLeg
   m_TagString: Untagged
@@ -47,6 +48,20 @@ CapsuleCollider:
   m_Height: 0.49
   m_Direction: 1
   m_Center: {x: 0, y: 0.17, z: 0}
+--- !u!114 &8401457617090965715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48094971262558869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed23644ad45040946a4d39eac689e291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multi: 0.5
+  health: {fileID: 2594843441171214643}
 --- !u!1 &62221774676379644
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,6 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5193067520982437477}
   - component: {fileID: 1051577257172233147}
+  - component: {fileID: 875968496250059159}
   m_Layer: 0
   m_Name: mixamorig:LeftLeg
   m_TagString: Untagged
@@ -126,6 +142,20 @@ CapsuleCollider:
   m_Height: 0.6
   m_Direction: 1
   m_Center: {x: 0, y: 0.18, z: 0}
+--- !u!114 &875968496250059159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104234633676122808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed23644ad45040946a4d39eac689e291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multi: 0.5
+  health: {fileID: 2594843441171214643}
 --- !u!1 &222610737997585788
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +671,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -756,6 +786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5618409356533192257}
   - component: {fileID: 7018330953100223514}
+  - component: {fileID: 5329818399268864821}
   m_Layer: 0
   m_Name: mixamorig:LeftForeArm
   m_TagString: Untagged
@@ -793,6 +824,20 @@ CapsuleCollider:
   m_Height: 0.35
   m_Direction: 1
   m_Center: {x: 0, y: 0.09, z: 0}
+--- !u!114 &5329818399268864821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2153481749077704179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed23644ad45040946a4d39eac689e291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multi: 0.5
+  health: {fileID: 2594843441171214643}
 --- !u!1 &2606134464256587442
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +885,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -991,8 +1036,9 @@ GameObject:
   - component: {fileID: 2483988594319966536}
   - component: {fileID: 2594843441171214643}
   - component: {fileID: 8353393092032443382}
+  - component: {fileID: 6824149122452902627}
   m_Layer: 0
-  m_Name: ZombieE (Todo)
+  m_Name: ZombieE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1061,9 +1107,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564e17e54a74ed84ab8237be484cae7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footstepSounds: {fileID: 0}
-  voiceMovementSounds: {fileID: 0}
-  voiceDeathSounds: {fileID: 0}
+  footstepSounds: {fileID: 5543595126146635801}
+  voiceMovementSounds: {fileID: 8923867687511289376}
+  voiceDeathSounds: {fileID: 2301872665547459671}
+--- !u!114 &6824149122452902627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2877430939096143337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd77b8b649aefc44391dd2a51371a94f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Deathtrigger: Death
 --- !u!1 &2968148801235135230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,6 +1133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8676856689237407677}
   - component: {fileID: 8542688598988717025}
+  - component: {fileID: 5747102402997561161}
   m_Layer: 0
   m_Name: mixamorig:RightArm
   m_TagString: Untagged
@@ -1111,6 +1171,20 @@ CapsuleCollider:
   m_Height: 0.4
   m_Direction: 1
   m_Center: {x: 0, y: 0.12, z: 0}
+--- !u!114 &5747102402997561161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2968148801235135230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed23644ad45040946a4d39eac689e291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multi: 0.5
+  health: {fileID: 2594843441171214643}
 --- !u!1 &3102783267399509569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,6 +1325,7 @@ GameObject:
   - component: {fileID: 6248004902567179164}
   - component: {fileID: 359028908839542297}
   - component: {fileID: 2301872665547459671}
+  - component: {fileID: 1267033496654074816}
   m_Layer: 0
   m_Name: mixamorig:Spine
   m_TagString: Untagged
@@ -1299,7 +1374,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1405,6 +1480,20 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d140b504d194d25499a5d983c61a1cf3, type: 3}
   pitchRange: 1
   basePitch: 1
+--- !u!114 &1267033496654074816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4509992250663928835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed23644ad45040946a4d39eac689e291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multi: 1
+  health: {fileID: 2594843441171214643}
 --- !u!1 &4667257930586303829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,6 +1630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847869480416452048}
   - component: {fileID: 8476265408651661900}
+  - component: {fileID: 1761423718972203695}
   m_Layer: 0
   m_Name: mixamorig:Head
   m_TagString: Untagged
@@ -1578,6 +1668,20 @@ CapsuleCollider:
   m_Height: 0.3
   m_Direction: 1
   m_Center: {x: 0, y: 0.09, z: 0}
+--- !u!114 &1761423718972203695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5505791816081419228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed23644ad45040946a4d39eac689e291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multi: 2
+  health: {fileID: 2594843441171214643}
 --- !u!1 &5557315204203187480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,6 +1724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 629526520844918032}
   - component: {fileID: 5475634632243248511}
+  - component: {fileID: 3764423284235758458}
   m_Layer: 0
   m_Name: mixamorig:RightForeArm
   m_TagString: Untagged
@@ -1657,6 +1762,20 @@ CapsuleCollider:
   m_Height: 0.35
   m_Direction: 1
   m_Center: {x: 0, y: 0.09, z: 0}
+--- !u!114 &3764423284235758458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5825641288273499975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed23644ad45040946a4d39eac689e291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multi: 0.5
+  health: {fileID: 2594843441171214643}
 --- !u!1 &5868368098888686907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,6 +1786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8895296569157565312}
   - component: {fileID: 4253181636173292495}
+  - component: {fileID: 6189923913512448195}
   m_Layer: 0
   m_Name: mixamorig:LeftArm
   m_TagString: Untagged
@@ -1704,6 +1824,20 @@ CapsuleCollider:
   m_Height: 0.4
   m_Direction: 1
   m_Center: {x: 0, y: 0.12, z: 0}
+--- !u!114 &6189923913512448195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5868368098888686907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed23644ad45040946a4d39eac689e291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multi: 0.5
+  health: {fileID: 2594843441171214643}
 --- !u!1 &6015731117852558743
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,6 +2042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7434600947774416482}
   - component: {fileID: 5799889122145660395}
+  - component: {fileID: 8328571873019948633}
   m_Layer: 0
   m_Name: mixamorig:RightLeg
   m_TagString: Untagged
@@ -1945,6 +2080,20 @@ CapsuleCollider:
   m_Height: 0.6
   m_Direction: 1
   m_Center: {x: 0, y: 0.18, z: 0}
+--- !u!114 &8328571873019948633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7561820721156326896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed23644ad45040946a4d39eac689e291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multi: 0.5
+  health: {fileID: 2594843441171214643}
 --- !u!1 &8038509940410954724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,6 +2135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6516888499333290232}
   - component: {fileID: 4628188621515891406}
+  - component: {fileID: 504340981088525591}
   m_Layer: 0
   m_Name: mixamorig:RightUpLeg
   m_TagString: Untagged
@@ -2023,3 +2173,17 @@ CapsuleCollider:
   m_Height: 0.49
   m_Direction: 1
   m_Center: {x: 0, y: 0.17, z: 0}
+--- !u!114 &504340981088525591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080698447417924659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed23644ad45040946a4d39eac689e291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multi: 0.5
+  health: {fileID: 2594843441171214643}
