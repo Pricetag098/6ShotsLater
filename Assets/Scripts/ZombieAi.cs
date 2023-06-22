@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Wavemanager : MonoBehaviour
+using UnityEngine.AI;
+[RequireComponent(typeof(NavMeshAgent))]
+public class ZombieAi : MonoBehaviour
 {
-    public Transform player;
     // Start is called before the first frame update
     void Start()
     {

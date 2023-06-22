@@ -737,11 +737,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!4 &1999517205 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1999517205, guid: eb2d4114f35d4ce4496f61ccd4f59189, type: 3}
-  m_PrefabInstance: {fileID: 9038220618323018055}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2008397738 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8823208261393235694, guid: 4c1d01077373c7243bd119facb22f8aa, type: 3}
@@ -831,7 +826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8823208261393235695, guid: 4c1d01077373c7243bd119facb22f8aa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.331
       objectReference: {fileID: 0}
     - target: {fileID: 8823208261393235695, guid: 4c1d01077373c7243bd119facb22f8aa, type: 3}
       propertyPath: m_LocalPosition.y
@@ -839,7 +834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8823208261393235695, guid: 4c1d01077373c7243bd119facb22f8aa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.3
+      value: -5.205
       objectReference: {fileID: 0}
     - target: {fileID: 8823208261393235695, guid: 4c1d01077373c7243bd119facb22f8aa, type: 3}
       propertyPath: m_LocalRotation.w
@@ -886,10 +881,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9038220619577060636, guid: eb2d4114f35d4ce4496f61ccd4f59189, type: 3}
-      propertyPath: m_AttachTransform
-      value: 
-      objectReference: {fileID: 1999517205}
     - target: {fileID: 9038220619577060636, guid: eb2d4114f35d4ce4496f61ccd4f59189, type: 3}
       propertyPath: m_InteractionManager
       value: 

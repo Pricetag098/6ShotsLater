@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 8823208261414973607}
   - component: {fileID: 5854473057509025053}
   - component: {fileID: 8823208261414973600}
+  - component: {fileID: 1071469937}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -574,6 +575,32 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1071469937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8823208261414973593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512df264f3e03c742a6c6b96ed043074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActions:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Input Actions
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 633e90f2-5062-41df-aa62-3c728dcc575b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  flightTime: 0.5
+  pullDistance: 1
 --- !u!1 &8823208261733289684
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +648,7 @@ GameObject:
   - component: {fileID: 8823208263079735496}
   - component: {fileID: 8823208263079735497}
   - component: {fileID: 5677943129678630025}
+  - component: {fileID: 1016810020}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -925,6 +953,32 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 7853243077479002344, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &1016810020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8823208263079735490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512df264f3e03c742a6c6b96ed043074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActions:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Input Actions
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: c8fc524b-5044-4e4c-9eb5-48c962d9b637
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  flightTime: 0.5
+  pullDistance: 1
 --- !u!1001 &8823208261423836551
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -49,7 +49,12 @@ public class Bullet : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Hit" + collision.collider.gameObject.name, collision.collider.gameObject);
+        if (despawning)
+		{
+            return;
+        }
+            
+        //Debug.Log("Hit" + collision.collider.gameObject.name, collision.collider.gameObject);
         HitBox hitBox = collision.collider.GetComponent<HitBox>();
         if(hitBox != null)
 		{
