@@ -46,8 +46,17 @@ public class Bullet : MonoBehaviour
         //tr.time = .1f;
         damage = dmg;
     }
-    
-    private void OnCollisionEnter(Collision collision)
+	private void LateUpdate()
+	{
+		if (despawning)
+		{
+            col.enabled = false;
+            mr.enabled = false;
+            rb.isKinematic = true;
+        }
+	}
+
+	private void OnCollisionEnter(Collision collision)
     {
         if (despawning)
 		{
@@ -63,9 +72,7 @@ public class Bullet : MonoBehaviour
 
 
         despawning=true;
-        col.enabled = false;
-        mr.enabled = false;
-        rb.isKinematic = true;
+        
         
     }
 }

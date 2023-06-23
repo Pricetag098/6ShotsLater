@@ -107,7 +107,7 @@ public class RangedGrab : MonoBehaviour
                 }
                 else
                 {
-                    if (Vector3.Distance(lastHandPos, transform.position) > pullDistance * Time.deltaTime)
+                    if (Vector3.Distance(lastHandPos, transform.position) > pullDistance * Time.deltaTime && Vector3.Dot((transform.position - lastHandPos) ,target.position - transform.position ) < 0)
                     {
                         StartGrab();
                     }
