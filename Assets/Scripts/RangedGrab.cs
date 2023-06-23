@@ -50,6 +50,17 @@ public class RangedGrab : MonoBehaviour
                 target = interactable.GetComponent<Rigidbody>();
                 
             }
+            else if(hit.collider.transform.parent != null)
+			{
+                interactable = hit.collider.transform.parent.GetComponent<XRGrabInteractable>();
+                if (interactable != null)
+                {
+
+                    controller.SendHapticImpulse(.5f, 0.1f);
+                    target = interactable.GetComponent<Rigidbody>();
+
+                }
+            }
 
 		}
         
