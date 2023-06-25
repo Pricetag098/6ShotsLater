@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
             if(timer > despawnDelay)
             {
                 //tr.time = 0;
-                GetComponent<PooledObj>().Despawn();
+                GetComponent<PooledObject>().Despawn();
             }
         }
         

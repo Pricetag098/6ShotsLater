@@ -52,7 +52,7 @@ public class Gun : MonoBehaviour
             {
                 for (int i = 0; i < shotsPerFiring; i++)
                 {
-                    GameObject bulletGo = pooler.SpawnObj();
+                    GameObject bulletGo = pooler.Spawn();
                     Bullet b = bulletGo.GetComponent<Bullet>();
 
                     Vector2 randVal = Random.insideUnitCircle * bulletSpreadDegrees;
