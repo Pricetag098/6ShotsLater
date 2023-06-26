@@ -21,4 +21,9 @@ public class ZombieDeathController : MonoBehaviour
         animator.SetTrigger(Deathtrigger);
 	}
 
+    public void ResetZombie()
+    {
+        
+    }
+
 }
