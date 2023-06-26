@@ -1441,7 +1441,8 @@ MonoBehaviour:
   attackDistance: 1
   attackTrigger: Attack
   reset: Reset
-  damagePerHit: 0
+  velocity: Velocity
+  damagePerHit: 10
 --- !u!1 &4446636473497688957
 GameObject:
   m_ObjectHideFlags: 0
