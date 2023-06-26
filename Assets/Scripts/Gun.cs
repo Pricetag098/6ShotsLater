@@ -71,10 +71,7 @@ public class Gun : MonoBehaviour
             //play no ammo sound / fx
             emptySound.Play();
         }
-        
-        
 
-        
     }
     public void StartReload()
     {

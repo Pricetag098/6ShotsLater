@@ -16,32 +16,41 @@ public class ZombieAi : MonoBehaviour
     Health health;
     Health playerHealth;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         health = GetComponent<Health>();
-        playerHealth = target.GetComponent<Health>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         agent.SetDestination(target.position);
-        if(agent.remainingDistance < attackDistance)
+        if(Vector3.Distance(target.position,transform.position) < attackDistance)
         {
             animator.SetTrigger(attackTrigger);
         }
         animator.SetFloat(velocity, agent.velocity.magnitude);
     }
-    public void Reset()
+    public void ResetZombie()
     {
         animator.SetTrigger(reset);
         health.health = health.maxHealth;
+        agent.enabled = false;
+        GetComponent<PooledObject>().Despawn();
 
     }
     public void DealDamage()
     {
         playerHealth.TakeDmg(damagePerHit);
+    }
+
+    public void Spawn(Transform player, Health pHealth)
+    {
+        target = player;
+        playerHealth = pHealth;
+        agent.enabled = true;
     }
 }
