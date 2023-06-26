@@ -11,6 +11,7 @@ public class ZombieAi : MonoBehaviour
     Animator animator;
     [SerializeField] string attackTrigger = "Attack";
     [SerializeField] string reset = "Reset";
+    [SerializeField] string velocity = "Velocity";
     [SerializeField] float damagePerHit;
     Health health;
     Health playerHealth;
@@ -31,6 +32,7 @@ public class ZombieAi : MonoBehaviour
         {
             animator.SetTrigger(attackTrigger);
         }
+        animator.SetFloat(velocity, agent.velocity.magnitude);
     }
     public void Reset()
     {
