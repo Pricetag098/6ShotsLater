@@ -29,7 +29,7 @@ public class Wavemanager : MonoBehaviour
             zombiePools[(Wave.SpawnRequest.ZombieTypes)i] = transform.GetChild(i).GetComponent<ObjectPooler>();
         }
         
-        SpawnWave(waves[Mathf.Clamp(waveIndex, 0, waves.Count)]);
+        //SpawnWave(waves[Mathf.Clamp(waveIndex, 0, waves.Count)]);
     }
 
     // Update is called once per frame
@@ -42,6 +42,7 @@ public class Wavemanager : MonoBehaviour
             {
                 SpawnWave(waves[Mathf.Clamp(waveIndex, 0, waves.Count - 1)]);
                 awaitingSpawn = false;
+                timer = 0f;
             }
         }
         else
