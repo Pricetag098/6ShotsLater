@@ -11,13 +11,16 @@ public class ZombieAi : MonoBehaviour
     Animator animator;
     [SerializeField] string attackTrigger = "Attack";
     [SerializeField] string reset = "Reset";
+    [SerializeField] float damagePerHit;
     Health health;
+    Health playerHealth;
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         health = GetComponent<Health>();
+        playerHealth = target.GetComponent<Health>();
     }
 
     // Update is called once per frame
@@ -37,6 +40,6 @@ public class ZombieAi : MonoBehaviour
     }
     public void DealDamage()
     {
-
+        playerHealth.TakeDmg(damagePerHit);
     }
 }

@@ -94,7 +94,7 @@ public class RangedGrab : MonoBehaviour
     {
         if (target!=null && interactor.firstInteractableSelected != null)
 		{
-            Debug.Log("AAAAA");
+            //Debug.Log("AAAAA");
             EndGrab();
 		}
         else if (target != null)
