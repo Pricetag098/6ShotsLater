@@ -82,7 +82,8 @@ public class ObjectPooler : MonoBehaviour
         PooledObject pooledObject = spawnedGo.GetComponent<PooledObject>();
         if(pooledObject == null)
 		{
-            spawnedGo.AddComponent<PooledObject>();
+            pooledObject = spawnedGo.AddComponent<PooledObject>();
+            
 		}
         pooledObject.origin = this;
         spawnedGo.SetActive(false);
