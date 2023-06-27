@@ -339,7 +339,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playOnAwake: 0
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: ecda77097a109614cb05685354dc57de, type: 3}
+  - {fileID: 8300000, guid: b61d0ebeab16ce64a8528baceecf2ca6, type: 3}
+  - {fileID: 8300000, guid: 1a9c62cebd3d7d84e9bcb564326c53cb, type: 3}
+  - {fileID: 8300000, guid: 45b0edc1c33e9e74382bbb4cbaa6f76a, type: 3}
+  - {fileID: 8300000, guid: 4a087a818fb15fd419bef3e30ef90e11, type: 3}
   pitchRange: 0
   basePitch: 1
 --- !u!1 &4620005272299192109
@@ -484,7 +489,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playOnAwake: 0
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 6b2cb2b21d343fa4a810076c46e843b5, type: 3}
+  - {fileID: 8300000, guid: 38339711f7330ab43835ffdd25572cd6, type: 3}
   pitchRange: 0
   basePitch: 1
 --- !u!1 &5216304974125613473
