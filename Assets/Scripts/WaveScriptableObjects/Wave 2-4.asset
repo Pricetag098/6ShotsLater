@@ -14,8 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnList:
   - zombieType: 0
-    number: 3
+    number: 1
   - zombieType: 6
-    number: 2
+    number: 1
   - zombieType: 2
+    number: 2
+  - zombieType: 3
+    number: 1
+  - zombieType: 4
     number: 2
