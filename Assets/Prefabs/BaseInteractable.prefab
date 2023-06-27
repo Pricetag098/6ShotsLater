@@ -196,14 +196,14 @@ MonoBehaviour:
   breakVelocity:
     enabled: 0
     value: Infinity
-  minDamage: 1000
+  minDamage: 50
   cooldown: 1
   hitSound:
-    enabled: 0
-    value: {fileID: 0}
+    enabled: 1
+    value: {fileID: 8767719917736557369}
   breakSound:
     enabled: 0
-    value: {fileID: 0}
+    value: {fileID: 3289757312621654630}
 --- !u!1 &2452405475988555649
 GameObject:
   m_ObjectHideFlags: 0
