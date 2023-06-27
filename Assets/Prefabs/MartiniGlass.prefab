@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MartiniGlass
       objectReference: {fileID: 0}
+    - target: {fileID: 8765612312984630038, guid: 3b3d735efc5958c42a12c4d5007adee6, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b3d735efc5958c42a12c4d5007adee6, type: 3}
 --- !u!4 &328884448688980959 stripped
@@ -119,7 +123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3893e406492f5c54b9a2ad4162461c9b, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3893e406492f5c54b9a2ad4162461c9b, type: 3}
