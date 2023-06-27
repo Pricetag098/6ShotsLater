@@ -26,7 +26,7 @@ public class ZombieSoundManager : MonoBehaviour
 
     public void PlayAttackVoice()
     {
-        voiceMovementSounds.Play();
+        voiceAttackSounds.Play();
     }
 
 
