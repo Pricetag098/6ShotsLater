@@ -13,15 +13,21 @@ MonoBehaviour:
   m_Name: Wave 10+
   m_EditorClassIdentifier: 
   spawnList:
-  - zombieType: 7
+  - zombieType: 0
     number: 1
-  - zombieType: 5
-    number: 4
-  - zombieType: 6
+  - zombieType: 1
+    number: 1
+  - zombieType: 2
     number: 2
   - zombieType: 3
     number: 1
-  - zombieType: 4
+  - zombieType: 5
+    number: 2
+  - zombieType: 7
     number: 2
   - zombieType: 8
-    number: 3
+    number: 1
+  - zombieType: 9
+    number: 1
+  - zombieType: 8
+    number: 1
