@@ -26,7 +26,7 @@ public class ExtraInputAction : MonoBehaviour
     
     void DoThing(InputAction.CallbackContext context)
     {
-        Debug.Log("Did thing");
+        //Debug.Log("Did thing");
         IXRInteractable interactable = interactor.firstInteractableSelected;
         if (interactable != null)
         {

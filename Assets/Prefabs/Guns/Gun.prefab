@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8001699bd29f0942b70d57712c87211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minVelocity: 0.3
+  minVelocity: 1
   breakVelocity:
     enabled: 0
     value: 0

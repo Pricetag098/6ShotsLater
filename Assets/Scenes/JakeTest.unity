@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShotGun1
       objectReference: {fileID: 0}
+    - target: {fileID: 7606793991410995919, guid: 66ff53fe4efe71e45b0cc0a53b1a88e5, type: 3}
+      propertyPath: minVelocity
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ff53fe4efe71e45b0cc0a53b1a88e5, type: 3}
 --- !u!1 &475712636
@@ -2294,7 +2298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8001699bd29f0942b70d57712c87211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minVelocity: 0
+  minVelocity: 40
   breakVelocity:
     enabled: 0
     value: Infinity
@@ -2941,6 +2945,14 @@ PrefabInstance:
     - target: {fileID: 8823208261393235693, guid: 4c1d01077373c7243bd119facb22f8aa, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823208261393235694, guid: 4c1d01077373c7243bd119facb22f8aa, type: 3}
+      propertyPath: m_CameraYOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823208261393235694, guid: 4c1d01077373c7243bd119facb22f8aa, type: 3}
+      propertyPath: m_RequestedTrackingOriginMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8823208261393235695, guid: 4c1d01077373c7243bd119facb22f8aa, type: 3}
       propertyPath: m_RootOrder
