@@ -66,7 +66,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 0}
+  - {fileID: 0}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -98,7 +100,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 685566086914437058}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
         m_MethodName: set_isKinematic
         m_Mode: 6
@@ -159,7 +161,7 @@ MonoBehaviour:
   m_SmoothRotationAmount: 5
   m_TightenRotation: 0.5
   m_ThrowOnDetach: 1
-  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingDuration: 0
   m_ThrowSmoothingCurve:
     serializedVersion: 2
     m_Curve:
@@ -176,7 +178,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_ThrowVelocityScale: 1.5
-  m_ThrowAngularVelocityScale: 1
+  m_ThrowAngularVelocityScale: 1.5
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
@@ -192,10 +194,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8001699bd29f0942b70d57712c87211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minVelocity: 10
+  minVelocity: 2
   breakVelocity:
-    enabled: 0
-    value: Infinity
+    enabled: 1
+    value: 5
   minDamage: 50
   cooldown: 1
   hitSound:
@@ -204,6 +206,7 @@ MonoBehaviour:
   breakSound:
     enabled: 0
     value: {fileID: 3289757312621654630}
+  dropOnBreak: 1
 --- !u!1 &2452405475988555649
 GameObject:
   m_ObjectHideFlags: 0

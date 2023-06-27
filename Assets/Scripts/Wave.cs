@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Wave")]
 public class Wave : ScriptableObject
 {
-    public static int zombieTypeCount = 8;
+    public static int zombieTypeCount = 10;
     [System.Serializable]
     public struct SpawnRequest
     {
@@ -19,7 +19,9 @@ public class Wave : ScriptableObject
             e,
             f,
             g,
-            h
+            h,
+            i,
+            j
         }
         [SerializeField]
         public ZombieTypes zombieType;

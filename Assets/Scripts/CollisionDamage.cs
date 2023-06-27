@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class CollisionDamage : MonoBehaviour
 {
@@ -10,6 +11,13 @@ public class CollisionDamage : MonoBehaviour
     [SerializeField] float cooldown =1;
     [SerializeField] Optional<SoundPlayer> hitSound;
     [SerializeField] Optional<SoundPlayer> breakSound;
+    [SerializeField] bool dropOnBreak = true;
+    XRGrabInteractable interactable;
+    private void Start()
+    {
+        interactable = GetComponent<XRGrabInteractable>();
+    }
+
 
     float timeOfLastHit;
     private void OnCollisionEnter(Collision collision)
@@ -27,7 +35,9 @@ public class CollisionDamage : MonoBehaviour
                 {
                     breakSound.Value.Play();
                 }
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                if(dropOnBreak)
+                interactable.enabled = false;
                 return;
             }
         }
