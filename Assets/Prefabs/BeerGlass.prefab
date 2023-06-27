@@ -51,9 +51,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 685566086914437068, guid: 3b3d735efc5958c42a12c4d5007adee6, type: 3}
+      propertyPath: minVelocity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 685566086914437068, guid: 3b3d735efc5958c42a12c4d5007adee6, type: 3}
+      propertyPath: breakSound.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 685566086914437068, guid: 3b3d735efc5958c42a12c4d5007adee6, type: 3}
+      propertyPath: breakVelocity.value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 685566086914437068, guid: 3b3d735efc5958c42a12c4d5007adee6, type: 3}
+      propertyPath: breakVelocity.enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 685566086914437069, guid: 3b3d735efc5958c42a12c4d5007adee6, type: 3}
       propertyPath: m_Name
       value: BeerGlass
+      objectReference: {fileID: 0}
+    - target: {fileID: 8765612312984630038, guid: 3b3d735efc5958c42a12c4d5007adee6, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b3d735efc5958c42a12c4d5007adee6, type: 3}
