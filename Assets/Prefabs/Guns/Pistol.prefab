@@ -199,6 +199,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5479164976275305851, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6851642483468056657, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -266,6 +270,10 @@ PrefabInstance:
     - target: {fileID: 6851642483468056658, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
       propertyPath: m_Center.z
       value: -0.12192753
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851642483468056662, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
+      propertyPath: gunfire.enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6851642483468056671, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
       propertyPath: m_Name

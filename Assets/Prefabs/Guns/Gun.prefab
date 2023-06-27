@@ -87,6 +87,9 @@ MonoBehaviour:
   shootSound: {fileID: 6851642484840512048}
   reloadSound: {fileID: 6851642484023763755}
   emptySound: {fileID: 6851642484705558374}
+  gunfire:
+    enabled: 1
+    value: {fileID: 198792769130808804, guid: 4543ab5e3d405ec40a8d4e9aa5165030, type: 3}
 --- !u!114 &6851642483468056663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +262,14 @@ MonoBehaviour:
     enabled: 0
     value: 0
   minDamage: 20
+  cooldown: 1
+  hitSound:
+    enabled: 0
+    value: {fileID: 0}
+  breakSound:
+    enabled: 0
+    value: {fileID: 0}
+  dropOnBreak: 1
 --- !u!1 &6851642484023763754
 GameObject:
   m_ObjectHideFlags: 0
