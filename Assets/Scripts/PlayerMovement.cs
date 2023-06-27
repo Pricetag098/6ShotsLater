@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class PlayerMovement : MonoBehaviour
 {
     CapsuleCollider capsuleCollider;
-    [SerializeField] Transform camera;
+    [SerializeField] Transform cam;
     [SerializeField] Transform head;
 
     [SerializeField] InputActionProperty move;
@@ -33,9 +33,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        head.eulerAngles = new Vector3(0, camera.eulerAngles.y, 0);
-        capsuleCollider.height = Vector3.Distance(transform.position,camera.position);
-        capsuleCollider.center = new Vector3(camera.localPosition.x, Mathf.Lerp(0,camera.localPosition.y,.5f), camera.localPosition.z);
+        head.eulerAngles = new Vector3(0, cam.eulerAngles.y, 0);
+        capsuleCollider.height = Vector3.Distance(transform.position,cam.position);
+        capsuleCollider.center = new Vector3(cam.localPosition.x, Mathf.Lerp(0,cam.localPosition.y,.5f), cam.localPosition.z);
         inputDir = move.action.ReadValue<Vector2>();
         
     }

@@ -75,7 +75,7 @@ public class Wavemanager : MonoBehaviour
     {
         for(int requestIndex = 0; requestIndex < wave.spawnList.Count; requestIndex++)
         {
-            for(int i = 0; i < wave.spawnList[requestIndex].num; i++)
+            for(int i = 0; i < wave.spawnList[requestIndex].number; i++)
             {
                 SpawnZombie(wave.spawnList[requestIndex].zombieType);
             }

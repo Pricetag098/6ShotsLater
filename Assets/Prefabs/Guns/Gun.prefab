@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6851642483468056662}
   - component: {fileID: 6851642483468056663}
   - component: {fileID: 6851642483468056668}
+  - component: {fileID: 7617882144206613534}
   m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
@@ -241,6 +242,23 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &7617882144206613534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6851642483468056671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8001699bd29f0942b70d57712c87211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minVelocity: 1
+  breakVelocity:
+    enabled: 0
+    value: 0
+  minDamage: 20
 --- !u!1 &6851642484023763754
 GameObject:
   m_ObjectHideFlags: 0

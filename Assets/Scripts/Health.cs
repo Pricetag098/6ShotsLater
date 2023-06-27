@@ -7,8 +7,9 @@ public class Health : MonoBehaviour
     public float health;
     public float maxHealth = 100;
 
-    public delegate void DieAction();
-    public DieAction OnDeath;
+    public delegate void Action();
+    public Action OnDeath;
+    public Action OnHit;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,8 @@ public class Health : MonoBehaviour
     public void TakeDmg(float dmg)
     {
         health-=dmg;
+        if(OnHit != null)
+        OnHit();
         if(health <= 0)
 		{
             Die();
@@ -33,6 +36,7 @@ public class Health : MonoBehaviour
 	{
         //do die stuff
         Debug.Log("dead",gameObject);
+        if(OnDeath != null)
         OnDeath();
 	}
 }

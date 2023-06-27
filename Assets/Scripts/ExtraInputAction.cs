@@ -26,12 +26,12 @@ public class ExtraInputAction : MonoBehaviour
     
     void DoThing(InputAction.CallbackContext context)
     {
-        Debug.Log("Did thing");
+        //Debug.Log("Did thing");
         IXRInteractable interactable = interactor.firstInteractableSelected;
         if (interactable != null)
         {
-            Gun gun = interactable.transform.GetComponent<Gun>();
-            if(gun != null)
+            Gun gun;
+            if(interactable.transform.TryGetComponent(out gun))
             {
                 gun.StartReload();
             }

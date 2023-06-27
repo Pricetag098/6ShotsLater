@@ -1006,7 +1006,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd77b8b649aefc44391dd2a51371a94f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Deathtrigger: Death
+  deathTrigger: Death
+  hitTrigger: Impact
 --- !u!195 &1494959287163340368
 NavMeshAgent:
   m_ObjectHideFlags: 0

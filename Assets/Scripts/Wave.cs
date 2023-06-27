@@ -24,7 +24,7 @@ public class Wave : ScriptableObject
         [SerializeField]
         public ZombieTypes zombieType;
         [SerializeField]
-        public int num;
+        public int number;
     }
 
     public List<SpawnRequest> spawnList = new List<SpawnRequest>();
