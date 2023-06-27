@@ -50,7 +50,7 @@ public class Wavemanager : MonoBehaviour
             bool allDead = true;
             for (int i = 0; i < currentWave.Count; i++)
             {
-                if (currentWave[i].gameObject.activeSelf)
+                if (!currentWave[i].dead)
                 {
                     allDead = false;
                 }

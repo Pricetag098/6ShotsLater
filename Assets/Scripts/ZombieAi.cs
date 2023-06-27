@@ -17,6 +17,7 @@ public class ZombieAi : MonoBehaviour
     Health playerHealth;
     [SerializeField] string hitTrigger = "Impact";
     bool recoiling = false;
+    public bool dead = false;
     // Start is called before the first frame update
     void Awake()
     {
@@ -66,7 +67,7 @@ public class ZombieAi : MonoBehaviour
     {
         animator.SetTrigger(reset);
         health.health = health.maxHealth;
-        
+        dead = true;
         GetComponent<PooledObject>().Despawn();
 
     }
@@ -87,6 +88,7 @@ public class ZombieAi : MonoBehaviour
         agent.enabled = true;
         agent.isStopped = false;
         recoiling = false;
+        dead = true;
     }
 
     public void StopRecoiling()

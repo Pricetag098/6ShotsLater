@@ -23,6 +23,7 @@ public class Gun : MonoBehaviour
     [SerializeField] float reloadHapticDuration = .1f;
     [Range(0, 1)][SerializeField] float reloadHapticStrength = 1;
     [SerializeField] SoundPlayer shootSound, reloadSound, emptySound;
+    [SerializeField] Optional<ParticleSystem> gunfire;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,7 +67,10 @@ public class Gun : MonoBehaviour
                 body.AddForce(transform.up * recoilForce.y + transform.forward * recoilForce.z + transform.right * recoilForce.x);
                 //play gun sound / fx
                 shootSound.Play();
-                
+                if (gunfire.Enabled)
+                {
+                    gunfire.Value.Play();
+                }
             }
             //play no ammo sound / fx
             emptySound.Play();
