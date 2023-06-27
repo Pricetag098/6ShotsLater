@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3868807094058084881
+--- !u!1001 &942360701393382425
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -53,96 +53,92 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 685566086914437069, guid: 3b3d735efc5958c42a12c4d5007adee6, type: 3}
       propertyPath: m_Name
-      value: WineBottle
-      objectReference: {fileID: 0}
-    - target: {fileID: 1850840980058369580, guid: 3b3d735efc5958c42a12c4d5007adee6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      value: ShotGlass
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b3d735efc5958c42a12c4d5007adee6, type: 3}
---- !u!4 &4337913346847213015 stripped
+--- !u!4 &328884448688980959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 685566086914437062, guid: 3b3d735efc5958c42a12c4d5007adee6, type: 3}
-  m_PrefabInstance: {fileID: 3868807094058084881}
+  m_PrefabInstance: {fileID: 942360701393382425}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &4570573558084589201
+--- !u!1001 &4700570199429690694
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4337913346847213015}
+    m_TransformParent: {fileID: 328884448688980959}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
+    - target: {fileID: -8679921383154817045, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
+    - target: {fileID: -8679921383154817045, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
+    - target: {fileID: -8679921383154817045, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
+    - target: {fileID: -8679921383154817045, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
+    - target: {fileID: -8679921383154817045, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
+    - target: {fileID: -8679921383154817045, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
+    - target: {fileID: -8679921383154817045, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
+    - target: {fileID: -8679921383154817045, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
+    - target: {fileID: -8679921383154817045, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
+    - target: {fileID: -8679921383154817045, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
+    - target: {fileID: -8679921383154817045, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
+    - target: {fileID: 919132149155446097, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
       propertyPath: m_Name
-      value: WineBottle_Mesh
+      value: ShotGlass_Mesh
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
+    - target: {fileID: 919132149155446097, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
---- !u!1 &3723520035422071744 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
+--- !u!1 &5618995216578381847 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
-  m_PrefabInstance: {fileID: 4570573558084589201}
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
+  m_PrefabInstance: {fileID: 4700570199429690694}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &9112820568167747692
+--- !u!64 &5723157831228945265
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3723520035422071744}
+  m_GameObject: {fileID: 5618995216578381847}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 6933939715142762413, guid: cb7fdb8198ebaa84bbfe5c32ee8d25ac, type: 3}
+  m_Mesh: {fileID: -2080327214471160190, guid: d34cbba3317cce64787c9cec74d5ed54, type: 3}
