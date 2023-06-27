@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform head;
 
     [SerializeField] InputActionProperty move;
+    [SerializeField] InputActionProperty rotate;
 
     [SerializeField] float speed;
     
@@ -24,10 +25,12 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         move.action.Enable();
+        rotate.action.Enable();
     }
     private void OnDisable()
     {
         move.action.Disable();
+        rotate.action.Disable();
     }
 
     // Update is called once per frame
@@ -37,7 +40,8 @@ public class PlayerMovement : MonoBehaviour
         capsuleCollider.height = Vector3.Distance(transform.position,cam.position);
         capsuleCollider.center = new Vector3(cam.localPosition.x, Mathf.Lerp(0,cam.localPosition.y,.5f), cam.localPosition.z);
         inputDir = move.action.ReadValue<Vector2>();
-        
+        float a = rotate.action.ReadValue<Vector2>().x;
+        transform.RotateAround(cam.position, Vector3.up, a);
     }
 
     private void FixedUpdate()
