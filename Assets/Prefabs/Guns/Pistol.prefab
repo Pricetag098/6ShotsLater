@@ -205,7 +205,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 616192265288533443, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.029
+      value: -0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 616192265288533443, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 616192265288533443, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.125
       objectReference: {fileID: 0}
     - target: {fileID: 616192265288533443, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
       propertyPath: m_LocalRotation.w
@@ -218,6 +226,38 @@ PrefabInstance:
     - target: {fileID: 616192265288533443, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 730289358935245523, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 730316586247967703, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 730320858676944063, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 730378560672931217, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 746652124938795189, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 746964789096095653, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 746975587586642337, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 747347460235235143, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5479164976275305851, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
       propertyPath: m_RootOrder
