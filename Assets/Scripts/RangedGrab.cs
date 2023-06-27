@@ -42,8 +42,8 @@ public class RangedGrab : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(transform.position, transform.forward, out hit))
 		{
-            XRGrabInteractable interactable = hit.collider.GetComponent<XRGrabInteractable>();
-            if(interactable != null)
+            XRGrabInteractable interactable; ;
+            if(hit.collider.TryGetComponent(out interactable))
 			{
                 
                 controller.SendHapticImpulse(.5f, 0.1f);
@@ -52,8 +52,8 @@ public class RangedGrab : MonoBehaviour
             }
             else if(hit.collider.transform.parent != null)
 			{
-                interactable = hit.collider.transform.parent.GetComponent<XRGrabInteractable>();
-                if (interactable != null)
+
+                if (hit.collider.transform.parent.TryGetComponent(out interactable))
                 {
 
                     controller.SendHapticImpulse(.5f, 0.1f);

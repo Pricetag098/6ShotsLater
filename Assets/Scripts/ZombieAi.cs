@@ -15,6 +15,8 @@ public class ZombieAi : MonoBehaviour
     [SerializeField] float damagePerHit;
     Health health;
     Health playerHealth;
+
+    bool recoiling = false;
     // Start is called before the first frame update
     void Awake()
     {
@@ -27,18 +29,38 @@ public class ZombieAi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(target.position);
-        if(Vector3.Distance(target.position,transform.position) < attackDistance)
+        if (agent.enabled)
         {
-            animator.SetTrigger(attackTrigger);
+            if (!recoiling)
+            {
+                agent.SetDestination(target.position);
+                Vector2 zombiePlanePos = new Vector2(transform.position.x, transform.position.z);
+                Vector2 targetPlanePos = new Vector2(target.position.x, target.position.z);
+                if (Vector2.Distance(zombiePlanePos, targetPlanePos) < attackDistance)
+                {
+                    animator.SetTrigger(attackTrigger);
+                }
+                animator.SetFloat(velocity, agent.velocity.magnitude);
+            }
+            else
+            {
+                agent.isStopped = true;
+            }
+            
         }
-        animator.SetFloat(velocity, agent.velocity.magnitude);
+        
+    }
+
+
+    public void Kill()
+    {
+        agent.enabled = false;
     }
     public void ResetZombie()
     {
         animator.SetTrigger(reset);
         health.health = health.maxHealth;
-        agent.enabled = false;
+        
         GetComponent<PooledObject>().Despawn();
 
     }
@@ -52,5 +74,10 @@ public class ZombieAi : MonoBehaviour
         target = player;
         playerHealth = pHealth;
         agent.enabled = true;
+    }
+
+    public void StopRecoiling()
+    {
+        recoiling = false;
     }
 }

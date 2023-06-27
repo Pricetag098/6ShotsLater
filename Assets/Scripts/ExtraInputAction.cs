@@ -30,8 +30,8 @@ public class ExtraInputAction : MonoBehaviour
         IXRInteractable interactable = interactor.firstInteractableSelected;
         if (interactable != null)
         {
-            Gun gun = interactable.transform.GetComponent<Gun>();
-            if(gun != null)
+            Gun gun;
+            if(interactable.transform.TryGetComponent(out gun))
             {
                 gun.StartReload();
             }
