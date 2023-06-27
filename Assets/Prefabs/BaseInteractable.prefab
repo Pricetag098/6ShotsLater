@@ -192,11 +192,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8001699bd29f0942b70d57712c87211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minVelocity: 40
+  minVelocity: 10
   breakVelocity:
     enabled: 0
     value: Infinity
   minDamage: 1000
+  cooldown: 1
+  hitSound:
+    enabled: 0
+    value: {fileID: 0}
+  breakSound:
+    enabled: 0
+    value: {fileID: 0}
 --- !u!1 &2452405475988555649
 GameObject:
   m_ObjectHideFlags: 0
