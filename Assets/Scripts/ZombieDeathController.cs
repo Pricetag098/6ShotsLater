@@ -7,22 +7,19 @@ public class ZombieDeathController : MonoBehaviour
     Health health;
     Animator animator;
     [SerializeField] string deathTrigger = "Death";
-    [SerializeField] string hitTrigger = "Impact";
+    
     ZombieAi zombieAi;
     // Start is called before the first frame update
     void Start()
     {
         health = GetComponent<Health>();
         health.OnDeath += Die;
-        health.OnHit += OnHit;
+        
         animator = GetComponent<Animator>();  
         zombieAi = GetComponent<ZombieAi>();
     }
 
-    void OnHit() 
-    {
-        animator.SetTrigger(hitTrigger);
-    }
+ 
 
     void Die()
 	{

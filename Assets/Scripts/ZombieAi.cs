@@ -15,7 +15,7 @@ public class ZombieAi : MonoBehaviour
     [SerializeField] float damagePerHit;
     Health health;
     Health playerHealth;
-
+    [SerializeField] string hitTrigger = "Impact";
     bool recoiling = false;
     // Start is called before the first frame update
     void Awake()
@@ -23,7 +23,7 @@ public class ZombieAi : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         health = GetComponent<Health>();
-        
+        health.OnHit += TakeDmg;
     }
 
     // Update is called once per frame
@@ -33,6 +33,7 @@ public class ZombieAi : MonoBehaviour
         {
             if (!recoiling)
             {
+                agent.isStopped = false;
                 agent.SetDestination(target.position);
                 Vector2 zombiePlanePos = new Vector2(transform.position.x, transform.position.z);
                 Vector2 targetPlanePos = new Vector2(target.position.x, target.position.z);
@@ -50,7 +51,12 @@ public class ZombieAi : MonoBehaviour
         }
         
     }
-
+    void TakeDmg()
+    {
+        if(!recoiling)
+            animator.SetTrigger(hitTrigger);
+        recoiling = true;
+    }
 
     public void Kill()
     {
@@ -66,7 +72,12 @@ public class ZombieAi : MonoBehaviour
     }
     public void DealDamage()
     {
-        playerHealth.TakeDmg(damagePerHit);
+        Vector2 zombiePlanePos = new Vector2(transform.position.x, transform.position.z);
+        Vector2 targetPlanePos = new Vector2(target.position.x, target.position.z);
+        if (Vector2.Distance(zombiePlanePos, targetPlanePos) < attackDistance)
+        {
+            playerHealth.TakeDmg(damagePerHit);
+        }
     }
 
     public void Spawn(Transform player, Health pHealth)
@@ -74,6 +85,8 @@ public class ZombieAi : MonoBehaviour
         target = player;
         playerHealth = pHealth;
         agent.enabled = true;
+        agent.isStopped = false;
+        recoiling = false;
     }
 
     public void StopRecoiling()
