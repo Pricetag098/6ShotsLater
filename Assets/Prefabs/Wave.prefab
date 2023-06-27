@@ -329,11 +329,16 @@ MonoBehaviour:
   player: {fileID: 0}
   playerHealth: {fileID: 0}
   waveNo: 0
-  waveChangeInterval: 2
+  waveChangeInterval: 1
   waves:
-  - {fileID: 11400000, guid: 23aac6e1cbe0af646a38041fa2096feb, type: 2}
-  - {fileID: 11400000, guid: d046318daa65d774c9461c63ee8b715c, type: 2}
-  - {fileID: 11400000, guid: 14919c80418908047bab2aad9aa24ad8, type: 2}
+  - {fileID: 11400000, guid: f1f13738ab80b224ba58729022594e98, type: 2}
+  - {fileID: 11400000, guid: 6d8c9a2fd12b5ed4e869ed2c74ffe093, type: 2}
+  - {fileID: 11400000, guid: 6d8c9a2fd12b5ed4e869ed2c74ffe093, type: 2}
+  - {fileID: 11400000, guid: a507d32f328d87c4d86c356e30b63778, type: 2}
+  - {fileID: 11400000, guid: a507d32f328d87c4d86c356e30b63778, type: 2}
+  - {fileID: 11400000, guid: 2b5ba23f5da2cdf4b9ae0b4abad7453e, type: 2}
+  - {fileID: 11400000, guid: 2b5ba23f5da2cdf4b9ae0b4abad7453e, type: 2}
+  - {fileID: 11400000, guid: c50d7359becc24442bed8259451d266b, type: 2}
   SpawnDelay: 5
 --- !u!1 &3340519869836979919
 GameObject:
