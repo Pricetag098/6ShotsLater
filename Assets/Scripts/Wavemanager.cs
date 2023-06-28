@@ -43,6 +43,13 @@ public class Wavemanager : MonoBehaviour
         //SpawnWave(waves[Mathf.Clamp(waveIndex, 0, waves.Count)]);
     }
 
+    public void StartGame()
+	{
+        if(state == States.awaitingStart)
+		{
+            state = States.awaitingSpawn;
+		}
+	}
 
     int requestIndex = 0;
     

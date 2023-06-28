@@ -15,7 +15,10 @@ MonoBehaviour:
   spawnList:
   - zombieType: 0
     number: 1
+    spawnDelay: 0
   - zombieType: 1
     number: 1
+    spawnDelay: 20
   - zombieType: 2
     number: 1
+    spawnDelay: 0
