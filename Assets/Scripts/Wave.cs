@@ -27,6 +27,8 @@ public class Wave : ScriptableObject
         public ZombieTypes zombieType;
         [SerializeField]
         public int number;
+
+        public float spawnDelay;
     }
 
     public List<SpawnRequest> spawnList = new List<SpawnRequest>();

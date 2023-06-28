@@ -88,7 +88,7 @@ public class ZombieAi : MonoBehaviour
         agent.enabled = true;
         agent.isStopped = false;
         recoiling = false;
-        dead = true;
+        dead = false;
     }
 
     public void StopRecoiling()
