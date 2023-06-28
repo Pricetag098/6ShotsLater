@@ -4,8 +4,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.XR.Haptics;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
 public class Gun : MonoBehaviour
 {
+    [SerializeField] bool auto;
     [SerializeField] float damage = 10;
     ObjectPooler pooler;
     [SerializeField] float bulletSpeed = 100,bulletSpreadDegrees = 0;
@@ -24,6 +26,10 @@ public class Gun : MonoBehaviour
     [Range(0, 1)][SerializeField] float reloadHapticStrength = 1;
     [SerializeField] SoundPlayer shootSound, reloadSound, emptySound;
     [SerializeField] Optional<ParticleSystem> gunfire;
+
+
+    [HideInInspector]public bool wasPressed;
+    [HideInInspector]public bool wasPressedThisFrame;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,9 +49,11 @@ public class Gun : MonoBehaviour
                 Reload();
             }
         }
+        if ((wasPressedThisFrame && !auto)|| (wasPressed && auto))
+            Shoot();
     }
 
-    public void Shoot(ActivateEventArgs eventArgs)
+    public void Shoot()
     {
         if(fireTimer <= 0 && !reloading)
         {
@@ -77,6 +85,12 @@ public class Gun : MonoBehaviour
         }
 
     }
+    public void OnDrop()
+	{
+
+	}
+
+
     public void StartReload()
     {
         if (reloading || ammoLeft == maxAmmo)
