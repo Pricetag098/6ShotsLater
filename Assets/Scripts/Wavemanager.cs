@@ -50,8 +50,8 @@ public class Wavemanager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		switch (state)
-		{
+        switch (state)
+        {
             case States.awaitingStart:
                 //Do Nothing yet
 
@@ -69,17 +69,17 @@ public class Wavemanager : MonoBehaviour
                 break;
             case States.spawning:
                 spawnTimer += Time.deltaTime;
-                Wave.SpawnRequest request = waves[Mathf.Clamp(waveIndex,0, waves.Count)].spawnList[requestIndex];
-                if(spawnTimer > request.spawnDelay)
-				{
+                Wave.SpawnRequest request = waves[Mathf.Clamp(waveIndex, 0, waves.Count)].spawnList[requestIndex];
+                if (spawnTimer > request.spawnDelay)
+                {
                     SpawnRequest(request);
                     spawnTimer = 0f;
                     requestIndex++;
-				}
-                if(requestIndex > waves[Mathf.Clamp(waveIndex, 0, waves.Count)].spawnList.Count-1)
-				{
+                }
+                if (requestIndex > waves[Mathf.Clamp(waveIndex, 0, waves.Count)].spawnList.Count - 1)
+                {
                     state = States.awaitingEndOfRound;
-				}
+                }
 
 
                 break;
@@ -99,50 +99,9 @@ public class Wavemanager : MonoBehaviour
                     state = States.awaitingSpawn;
                 }
                 break;
-		}
-        
-        //if (awaitingSpawn)
-        //{
-        //    
-        //}
-        //else
-        //{
-        //    bool alldead = true;
-        //    for (int i = 0; i < currentwave.count; i++)
-        //    {
-        //        if (!currentwave[i].dead)
-        //        {
-        //            alldead = false;
-        //        }
-        //    }
-        //    if (alldead)
-        //    {
-        //        waveno++;
-        //        currentwave.clear();
-        //        if (waveno % wavechangeinterval == 0)
-        //            waveindex++;
-        //        awaitingspawn = true;
-        //    }
-        //}
-        
+        }
+
     }
-
-
-    //[ContextMenu("TEST")]
-    //void TestSpawn1()
-    //{
-    //    SpawnWave(waves[0]);
-    //}
-    //void SpawnWave(Wave wave)
-    //{
-    //    for(int requestIndex = 0; requestIndex < wave.spawnList.Count; requestIndex++)
-    //    {
-    //        for(int i = 0; i < wave.spawnList[requestIndex].number; i++)
-    //        {
-    //            SpawnZombie(wave.spawnList[requestIndex].zombieType);
-    //        }
-    //    }
-    //}
 
     void SpawnRequest(Wave.SpawnRequest request)
 	{
