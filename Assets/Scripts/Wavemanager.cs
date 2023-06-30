@@ -76,7 +76,7 @@ public class Wavemanager : MonoBehaviour
                 break;
             case States.spawning:
                 spawnTimer += Time.deltaTime;
-                Wave.SpawnRequest request = waves[Mathf.Clamp(waveIndex, 0, waves.Count)].spawnList[requestIndex];
+                Wave.SpawnRequest request = waves[Mathf.Clamp(waveIndex, 0, waves.Count-1)].spawnList[requestIndex];
                 if (spawnTimer > request.spawnDelay)
                 {
                     SpawnRequest(request);

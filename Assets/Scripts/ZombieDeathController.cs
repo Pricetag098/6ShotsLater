@@ -23,7 +23,7 @@ public class ZombieDeathController : MonoBehaviour
 
     void Die()
 	{
-        Debug.Log("Dead Zombie",gameObject);
+        //Debug.Log("Dead Zombie",gameObject);
         animator.SetTrigger(deathTrigger);
         zombieAi.Kill();
 	}
