@@ -53,7 +53,7 @@ public class ZombieAi : MonoBehaviour
         
     }
 
-
+    [ContextMenu("Kill")]
     public void KillInstant()
 	{
         health.TakeDmg(1000000000000000000);
