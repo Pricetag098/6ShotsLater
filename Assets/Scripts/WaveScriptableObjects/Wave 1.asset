@@ -14,8 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnList:
   - zombieType: 0
-    number: 1
+    number: 2
+    spawnDelay: 1
+    moveSpeedMin: 0.3
+    moveSpeedMax: 0.6
   - zombieType: 1
-    number: 1
+    number: 2
+    spawnDelay: 2
+    moveSpeedMin: 0.3
+    moveSpeedMax: 0.6
   - zombieType: 2
-    number: 1
+    number: 2
+    spawnDelay: 3
+    moveSpeedMin: 0.3
+    moveSpeedMax: 0.6

@@ -35,7 +35,7 @@ public class Health : MonoBehaviour
     void Die()
 	{
         //do die stuff
-        Debug.Log("dead",gameObject);
+        //Debug.Log("dead",gameObject);
         if(OnDeath != null)
         OnDeath();
 	}

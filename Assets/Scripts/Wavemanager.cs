@@ -17,9 +17,21 @@ public class Wavemanager : MonoBehaviour
     List<Wave> waves = new List<Wave> ();
 
     List<ZombieAi> currentWave = new List<ZombieAi>();
-    bool awaitingSpawn = true;
-    float timer;
+    
+    float spawnDelayTimer;
     [SerializeField] float SpawnDelay;
+
+
+    public enum States
+    {
+        awaitingStart,
+        awaitingSpawn,
+        spawning,
+        awaitingEndOfRound,
+        dead
+    }
+    public States state;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,57 +44,106 @@ public class Wavemanager : MonoBehaviour
         //SpawnWave(waves[Mathf.Clamp(waveIndex, 0, waves.Count)]);
     }
 
-    // Update is called once per frame
-    void Update()
+    [ContextMenu("StartGame")]
+    public void StartGame()
+	{
+        if(state == States.awaitingStart)
+		{
+            state = States.awaitingSpawn;
+		}
+	}
+
+    [ContextMenu("KillAll")]
+    public void KillAll()
     {
-        if (awaitingSpawn)
+        foreach (ZombieAi zombie in currentWave )
         {
-            timer += Time.deltaTime;
-            if(timer > SpawnDelay)
-            {
-                SpawnWave(waves[Mathf.Clamp(waveIndex, 0, waves.Count - 1)]);
-                awaitingSpawn = false;
-                timer = 0f;
-            }
-        }
-        else
-        {
-            bool allDead = true;
-            for (int i = 0; i < currentWave.Count; i++)
-            {
-                if (!currentWave[i].dead)
-                {
-                    allDead = false;
-                }
-            }
-            if (allDead)
-            {
-                waveNo++;
-                currentWave.Clear();
-                if (waveNo % waveChangeInterval == 0)
-                    waveIndex++;
-                awaitingSpawn = true;
-            }
-        }
-        
-    }
-    [ContextMenu("TEST")]
-    void TestSpawn1()
-    {
-        SpawnWave(waves[0]);
-    }
-    void SpawnWave(Wave wave)
-    {
-        for(int requestIndex = 0; requestIndex < wave.spawnList.Count; requestIndex++)
-        {
-            for(int i = 0; i < wave.spawnList[requestIndex].number; i++)
-            {
-                SpawnZombie(wave.spawnList[requestIndex].zombieType);
-            }
+            zombie.KillInstant();
         }
     }
 
-    void SpawnZombie(Wave.SpawnRequest.ZombieTypes type)
+    int requestIndex = 0;
+    
+    float spawnTimer = 0;
+    // Update is called once per frame
+    void Update()
+    {
+        switch (state)
+        {
+            case States.awaitingStart:
+                //Do Nothing yet
+
+                break;
+            case States.awaitingSpawn:
+                spawnDelayTimer += Time.deltaTime;
+                if (spawnDelayTimer > SpawnDelay)
+                {
+                    //SpawnWave(waves[Mathf.Clamp(waveIndex, 0, waves.Count - 1)]);
+                    state = States.spawning;
+                    spawnDelayTimer = 0f;
+                    requestIndex = 0;
+                    spawnTimer = 0;
+                }
+                break;
+            case States.spawning:
+                spawnTimer += Time.deltaTime;
+                Wave.SpawnRequest request = waves[Mathf.Clamp(waveIndex, 0, waves.Count-1)].spawnList[requestIndex];
+                if (spawnTimer > request.spawnDelay)
+                {
+                    SpawnRequest(request);
+                    spawnTimer = 0f;
+                    requestIndex++;
+                }
+                if (requestIndex > waves[Mathf.Clamp(waveIndex, 0, waves.Count)].spawnList.Count - 1)
+                {
+                    state = States.awaitingEndOfRound;
+                }
+
+
+                break;
+            case States.awaitingEndOfRound:
+                bool alldead = true;
+                for (int i = 0; i < currentWave.Count; i++)
+                {
+                    if (!currentWave[i].dead)
+                    {
+                        alldead = false;
+                    }
+                }
+                if (alldead)
+                {
+                    waveIndex++;
+                    currentWave.Clear();
+                    state = States.awaitingSpawn;
+                }
+                break;
+
+            case States.dead:
+                if(currentWave.Count > 0)
+				{
+                    for(int i = 0; i < currentWave.Count; i++)
+					{
+                        currentWave[i].KillInstant();
+					}
+                    currentWave.Clear();
+				}
+
+                break;
+        }
+
+    }
+
+    void SpawnRequest(Wave.SpawnRequest request)
+	{
+        for (int i = 0; i < request.number; i++)
+        {
+
+            float randVal = Random.Range(request.moveSpeedMin,request.moveSpeedMax);
+            SpawnZombie(request.zombieType,randVal);
+        }
+    }
+
+    void SpawnZombie(Wave.SpawnRequest.ZombieTypes type,float speed)
     {
         GameObject zomGo = zombiePools[type].Spawn();
         SpawnPoint spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
@@ -91,7 +152,7 @@ public class Wavemanager : MonoBehaviour
         //TODO add radius spawn
 
         ZombieAi zombieAi = zomGo.GetComponent<ZombieAi>();
-        zombieAi.Spawn(player,playerHealth);
+        zombieAi.Spawn(player,playerHealth,speed);
         currentWave.Add(zombieAi);
     }
 
