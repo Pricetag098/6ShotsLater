@@ -52,6 +52,15 @@ public class ZombieAi : MonoBehaviour
         }
         
     }
+
+
+    public void KillInstant()
+	{
+        health.TakeDmg(1000000000000000000);
+	}
+
+
+
     void TakeDmg()
     {
         if(!recoiling)
@@ -79,9 +88,10 @@ public class ZombieAi : MonoBehaviour
         {
             playerHealth.TakeDmg(damagePerHit);
         }
+        Debug.Log("dealingDamage");
     }
 
-    public void Spawn(Transform player, Health pHealth)
+    public void Spawn(Transform player, Health pHealth, float moveSpeed)
     {
         target = player;
         playerHealth = pHealth;
@@ -89,6 +99,7 @@ public class ZombieAi : MonoBehaviour
         agent.isStopped = false;
         recoiling = false;
         dead = false;
+        agent.speed = moveSpeed;
     }
 
     public void StopRecoiling()

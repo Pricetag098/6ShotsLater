@@ -16,7 +16,7 @@ TagManager:
   - InteractablePickup
   - Zombie
   - PlayerHands
-  - 
+  - PlayerHandCollision
   - 
   - 
   - 

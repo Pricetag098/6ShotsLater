@@ -29,6 +29,8 @@ public class Wave : ScriptableObject
         public int number;
 
         public float spawnDelay;
+        public float moveSpeedMin;
+        public float moveSpeedMax;
     }
 
     public List<SpawnRequest> spawnList = new List<SpawnRequest>();

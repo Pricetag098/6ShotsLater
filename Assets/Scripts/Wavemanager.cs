@@ -27,7 +27,8 @@ public class Wavemanager : MonoBehaviour
         awaitingStart,
         awaitingSpawn,
         spawning,
-        awaitingEndOfRound
+        awaitingEndOfRound,
+        dead
     }
     public States state;
 
@@ -106,6 +107,18 @@ public class Wavemanager : MonoBehaviour
                     state = States.awaitingSpawn;
                 }
                 break;
+
+            case States.dead:
+                if(currentWave.Count > 0)
+				{
+                    for(int i = 0; i < currentWave.Count; i++)
+					{
+                        currentWave[i].KillInstant();
+					}
+                    currentWave.Clear();
+				}
+
+                break;
         }
 
     }
@@ -114,11 +127,13 @@ public class Wavemanager : MonoBehaviour
 	{
         for (int i = 0; i < request.number; i++)
         {
-            SpawnZombie(request.zombieType);
+
+            float randVal = Random.Range(request.moveSpeedMin,request.moveSpeedMax);
+            SpawnZombie(request.zombieType,randVal);
         }
     }
 
-    void SpawnZombie(Wave.SpawnRequest.ZombieTypes type)
+    void SpawnZombie(Wave.SpawnRequest.ZombieTypes type,float speed)
     {
         GameObject zomGo = zombiePools[type].Spawn();
         SpawnPoint spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
@@ -127,7 +142,7 @@ public class Wavemanager : MonoBehaviour
         //TODO add radius spawn
 
         ZombieAi zombieAi = zomGo.GetComponent<ZombieAi>();
-        zombieAi.Spawn(player,playerHealth);
+        zombieAi.Spawn(player,playerHealth,speed);
         currentWave.Add(zombieAi);
     }
 
