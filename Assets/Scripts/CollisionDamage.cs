@@ -13,7 +13,10 @@ public class CollisionDamage : MonoBehaviour
     [SerializeField] Optional<SoundPlayer> breakSound;
     [SerializeField] bool dropOnBreak = true;
     XRGrabInteractable interactable;
-
+    [SerializeField] float breakHapticDuration = .1f;
+    [Range(0, 1)][SerializeField] float breakHapticStrength = 1;
+    [SerializeField] float hitHapticDuration = .1f;
+    [Range(0, 1)][SerializeField] float hitHapticStrength = 1;
     bool hit = false;
     private void Start()
     {
@@ -42,6 +45,8 @@ public class CollisionDamage : MonoBehaviour
                 //Destroy(gameObject);
                 if(dropOnBreak)
                 interactable.enabled = false;
+                if(interactable.firstInteractorSelecting != null)
+                    interactable.firstInteractorSelecting.transform.GetComponent<XRController>().SendHapticImpulse(breakHapticStrength,breakHapticDuration);
                 return;
             }
         }
@@ -52,6 +57,8 @@ public class CollisionDamage : MonoBehaviour
             {
                 hitSound.Value.Play();
             }
+            if (interactable.firstInteractorSelecting != null)
+                interactable.firstInteractorSelecting.transform.GetComponent<XRController>().SendHapticImpulse(hitHapticStrength, hitHapticDuration);
         }
     }
     

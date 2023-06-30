@@ -16,9 +16,15 @@ MonoBehaviour:
   - zombieType: 0
     number: 1
     spawnDelay: 0
+    moveSpeedMin: 0
+    moveSpeedMax: 10
   - zombieType: 1
     number: 1
     spawnDelay: 20
+    moveSpeedMin: 0
+    moveSpeedMax: 10
   - zombieType: 2
     number: 1
     spawnDelay: 0
+    moveSpeedMin: 0
+    moveSpeedMax: 10
