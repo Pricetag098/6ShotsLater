@@ -333,13 +333,16 @@ MonoBehaviour:
   waves:
   - {fileID: 11400000, guid: f1f13738ab80b224ba58729022594e98, type: 2}
   - {fileID: 11400000, guid: 6d8c9a2fd12b5ed4e869ed2c74ffe093, type: 2}
-  - {fileID: 11400000, guid: 6d8c9a2fd12b5ed4e869ed2c74ffe093, type: 2}
-  - {fileID: 11400000, guid: a507d32f328d87c4d86c356e30b63778, type: 2}
-  - {fileID: 11400000, guid: a507d32f328d87c4d86c356e30b63778, type: 2}
-  - {fileID: 11400000, guid: 2b5ba23f5da2cdf4b9ae0b4abad7453e, type: 2}
-  - {fileID: 11400000, guid: 2b5ba23f5da2cdf4b9ae0b4abad7453e, type: 2}
-  - {fileID: 11400000, guid: c50d7359becc24442bed8259451d266b, type: 2}
+  - {fileID: 11400000, guid: f62e18985a9723246bc0670aa3361dec, type: 2}
+  - {fileID: 11400000, guid: 57d2d337f01741342a07b57ba4a9599b, type: 2}
+  - {fileID: 11400000, guid: 061e3bc6b1dc42a4baeb478444287bf8, type: 2}
+  - {fileID: 11400000, guid: e597597bb953aab4b9f57cea53d6db32, type: 2}
+  - {fileID: 11400000, guid: 66ddaebc8bc8c7a4ba2c949fa14d5409, type: 2}
+  - {fileID: 11400000, guid: 36183018148c9bf40af9f06db3a36eda, type: 2}
+  - {fileID: 11400000, guid: ab8ee6fa5aeec3144b3bdd1c9ceb46f9, type: 2}
+  - {fileID: 11400000, guid: 6f317269ae16b3b409e950876f9c4dde, type: 2}
   SpawnDelay: 5
+  state: 0
 --- !u!1 &3340519869836979919
 GameObject:
   m_ObjectHideFlags: 0

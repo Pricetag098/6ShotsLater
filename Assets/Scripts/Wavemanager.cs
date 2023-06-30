@@ -44,6 +44,7 @@ public class Wavemanager : MonoBehaviour
         //SpawnWave(waves[Mathf.Clamp(waveIndex, 0, waves.Count)]);
     }
 
+    [ContextMenu("StartGame")]
     public void StartGame()
 	{
         if(state == States.awaitingStart)
@@ -51,6 +52,15 @@ public class Wavemanager : MonoBehaviour
             state = States.awaitingSpawn;
 		}
 	}
+
+    [ContextMenu("KillAll")]
+    public void KillAll()
+    {
+        foreach (ZombieAi zombie in currentWave )
+        {
+            zombie.KillInstant();
+        }
+    }
 
     int requestIndex = 0;
     

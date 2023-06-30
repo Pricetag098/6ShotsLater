@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6851642483468056662, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
+      propertyPath: maxAmmo
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6851642483468056671, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
       propertyPath: m_Name
       value: P08 Luger
