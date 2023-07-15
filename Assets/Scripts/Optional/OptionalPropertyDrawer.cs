@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 [CustomPropertyDrawer(typeof(Optional<>))]
-public class OptionalPropertyDrawer : PropertyDrawer
+public class OptianalPropertyDrawer : PropertyDrawer
 {
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
