@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]VolumeProfile profile;
     [SerializeField] float maxVinette = 1;
     public Wavemanager wavemanager;
+
+    [SerializeField] float healthPerSecond;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,10 @@ public class PlayerHealth : MonoBehaviour
         health.OnDeath += Die;
     }
 
-    
+    private void Update()
+    {
+        health.health = Mathf.Clamp(health.health +  healthPerSecond * Time.deltaTime,0,health.maxHealth);
+    }
 
     void OnHit()
 	{

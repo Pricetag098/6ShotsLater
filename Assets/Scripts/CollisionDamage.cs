@@ -8,7 +8,7 @@ public class CollisionDamage : MonoBehaviour
     [SerializeField] float minVelocity = 0;
     [SerializeField] Optional<float> breakVelocity;
     [SerializeField] float minDamage;
-    [SerializeField] float cooldown =1;
+    //[SerializeField] float cooldown =1;
     [SerializeField] Optional<SoundPlayer> hitSound;
     [SerializeField] Optional<SoundPlayer> breakSound;
     [SerializeField] Optional<ParticleSystem> breakParticle;
