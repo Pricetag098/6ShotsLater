@@ -11,6 +11,7 @@ public class CollisionDamage : MonoBehaviour
     [SerializeField] float cooldown =1;
     [SerializeField] Optional<SoundPlayer> hitSound;
     [SerializeField] Optional<SoundPlayer> breakSound;
+    [SerializeField] Optional<ParticleSystem> breakParticle;
     [SerializeField] bool dropOnBreak = true;
     XRGrabInteractable interactable;
     [SerializeField] float breakHapticDuration = .1f;
@@ -18,6 +19,8 @@ public class CollisionDamage : MonoBehaviour
     [SerializeField] float hitHapticDuration = .1f;
     [Range(0, 1)][SerializeField] float hitHapticStrength = 1;
     bool hit = false;
+
+    
     private void Start()
     {
         interactable = GetComponent<XRGrabInteractable>();
@@ -41,6 +44,12 @@ public class CollisionDamage : MonoBehaviour
                 if (breakSound.Enabled)
                 {
                     breakSound.Value.Play();
+                }
+                if (breakParticle.Enabled)
+                {
+                    breakParticle.Value.Play();
+                    GetComponent<Rigidbody>().isKinematic = true;
+                    GetComponentInChildren<MeshRenderer>().gameObject.SetActive(false);
                 }
                 //Destroy(gameObject);
                 if(dropOnBreak)
