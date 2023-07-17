@@ -17,7 +17,7 @@ public class Grenade : MonoBehaviour
     [SerializeField] SoundPlayer cookSound;
     [SerializeField] GameObject body;
     [SerializeField] bool explodeOnImpact;
-   
+    [SerializeField] int handLayer;
     public void ReleseTrigger()
     {
         if (!cooking)
@@ -74,6 +74,10 @@ public class Grenade : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if(collision.gameObject.layer == handLayer)
+		{
+            return;
+		}
         if (explodeOnImpact && cooking)
             Explode();
     }

@@ -573,6 +573,7 @@ MonoBehaviour:
   cookSound: {fileID: 1229041618214578979}
   body: {fileID: 0}
   explodeOnImpact: 0
+  handLayer: 10
 --- !u!1001 &4229381821831545489
 PrefabInstance:
   m_ObjectHideFlags: 0

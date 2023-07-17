@@ -10,13 +10,7 @@ public class SoundPlayer : MonoBehaviour
     public float pitchRange = 0f;
     public float basePitch = 1;
     AudioSource source;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-        
-        
-    }
+    
     private void Awake()
     {
         source = GetComponent<AudioSource>();
