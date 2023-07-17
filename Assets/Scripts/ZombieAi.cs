@@ -7,6 +7,7 @@ public class ZombieAi : MonoBehaviour
 {
     NavMeshAgent agent;
     [SerializeField] Transform target;
+    public Wavemanager wavemanager;
     [SerializeField] float attackDistance = 1;
     Animator animator;
     [SerializeField] string attackTrigger = "Attack";

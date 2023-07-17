@@ -6,8 +6,9 @@ public class Wavemanager : MonoBehaviour
 {
     public Transform player;
     public Health playerHealth;
-    public int waveNo = 0;
+    //public int waveNo = 0;
     int waveIndex = 0;
+    int kills = 0;
     [Min(1)]
     public int waveChangeInterval = 1;
     SpawnPoint[] spawnPoints;
@@ -21,7 +22,7 @@ public class Wavemanager : MonoBehaviour
     float spawnDelayTimer;
     [SerializeField] float SpawnDelay;
 
-
+    [SerializeField] Optional<ScoreUI> scoreUI;
     public enum States
     {
         awaitingStart,
@@ -115,6 +116,8 @@ public class Wavemanager : MonoBehaviour
                     waveIndex++;
                     currentWave.Clear();
                     state = States.awaitingSpawn;
+                    if(scoreUI.Enabled)
+                    scoreUI.Value.UpdateBoard(kills, waveIndex);
                 }
                 break;
 
@@ -154,6 +157,14 @@ public class Wavemanager : MonoBehaviour
         ZombieAi zombieAi = zomGo.GetComponent<ZombieAi>();
         zombieAi.Spawn(player,playerHealth,speed);
         currentWave.Add(zombieAi);
+        zombieAi.wavemanager = this;
+    }
+
+    public void AddKill()
+    {
+        kills++;
+        if (scoreUI.Enabled)
+            scoreUI.Value.UpdateBoard(kills, waveIndex);
     }
 
 
