@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Grenade : MonoBehaviour
 {
@@ -11,10 +12,10 @@ public class Grenade : MonoBehaviour
     [SerializeField] float explosionRadius;
     [SerializeField] float explosionForce;
     [SerializeField] float explosionDamage;
-    [SerializeField] ParticleSystem particle;
+    [SerializeField] Optional<ParticleSystem> particle;
     [SerializeField] SoundPlayer explodeSound;
     [SerializeField] SoundPlayer cookSound;
-
+    [SerializeField] GameObject body;
    
     public void ReleseTrigger()
     {
@@ -43,18 +44,22 @@ public class Grenade : MonoBehaviour
         for(int i = 0; i < hits.Length; i++)
         {
             Rigidbody rb;
-            if (TryGetComponent(out rb))
+            if (hits[i].TryGetComponent(out rb))
             {
                 rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
             }
             HitBox hb;
-            if(TryGetComponent(out hb))
+            if(hits[i].TryGetComponent(out hb))
             {
                 hb.OnHit(explosionDamage/ Mathf.Pow(Vector3.Distance(transform.position,hb.transform.position),2));
             }
         }
-        particle.Play();
+        if(particle.Enabled)
+        particle.Value.Play();
         explodeSound.Play();
+        body.SetActive(false);
+        GetComponent<Rigidbody>().isKinematic = false;
+        GetComponent<XRGrabInteractable>().enabled = false;
         enabled = false;
     }
 }
