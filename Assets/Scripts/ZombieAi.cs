@@ -19,6 +19,9 @@ public class ZombieAi : MonoBehaviour
     [SerializeField] string hitTrigger = "Impact";
     bool recoiling = false;
     public bool dead = false;
+
+    [SerializeField] SoundPlayer swingSound;
+    [SerializeField] SoundPlayer hitSound;
     // Start is called before the first frame update
     void Awake()
     {
@@ -42,6 +45,7 @@ public class ZombieAi : MonoBehaviour
                 if (Vector2.Distance(zombiePlanePos, targetPlanePos) < attackDistance)
                 {
                     animator.SetTrigger(attackTrigger);
+                    swingSound.Play();
                 }
                 animator.SetFloat(velocity, agent.velocity.magnitude);
             }
@@ -88,6 +92,7 @@ public class ZombieAi : MonoBehaviour
         if (Vector2.Distance(zombiePlanePos, targetPlanePos) < attackDistance)
         {
             playerHealth.TakeDmg(damagePerHit);
+            hitSound.Play();
         }
         Debug.Log("dealingDamage");
     }

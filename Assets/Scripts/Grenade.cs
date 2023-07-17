@@ -74,12 +74,14 @@ public class Grenade : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.layer == handLayer)
+        
+        if(collision.gameObject.layer != handLayer)
 		{
-            return;
-		}
-        if (explodeOnImpact && cooking)
-            Explode();
+            if (explodeOnImpact && cooking)
+                Explode();
+        }
+        
+
     }
 
     public void Despawn()
