@@ -55,7 +55,7 @@ public class CollisionDamage : MonoBehaviour
                 if(dropOnBreak)
                 interactable.enabled = false;
                 if(interactable.firstInteractorSelecting != null)
-                    interactable.firstInteractorSelecting.transform.GetComponent<XRController>().SendHapticImpulse(breakHapticStrength,breakHapticDuration);
+                    interactable.firstInteractorSelecting.transform.GetComponent<ActionBasedController>().SendHapticImpulse(breakHapticStrength,breakHapticDuration);
                 return;
             }
         }
@@ -67,7 +67,7 @@ public class CollisionDamage : MonoBehaviour
                 hitSound.Value.Play();
             }
             if (interactable.firstInteractorSelecting != null)
-                interactable.firstInteractorSelecting.transform.GetComponent<XRController>().SendHapticImpulse(hitHapticStrength, hitHapticDuration);
+                interactable.firstInteractorSelecting.transform.GetComponent<ActionBasedController>().SendHapticImpulse(hitHapticStrength, hitHapticDuration);
         }
     }
     

@@ -34,6 +34,11 @@ public class RangedGrab : MonoBehaviour
         interactor = GetComponent<XRBaseInteractor>();
     }
 
+    private void OnDestroy()
+    {
+        inputActions.action.performed -= TryGrab;
+    }
+
     void TryGrab(InputAction.CallbackContext context)
 	{
         if (interactor.firstInteractableSelected != null || selected)

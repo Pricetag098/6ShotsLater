@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
     }
     public void TakeDmg(float dmg)
     {
-        health-=dmg;
+        health = Mathf.Clamp(health -dmg,0,maxHealth);
         if(OnHit != null)
         OnHit();
         if(health <= 0)
