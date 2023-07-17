@@ -26,8 +26,12 @@ public class ExtraInputAction : MonoBehaviour
         reloadAction.action.Disable();
         shootAction.action.Disable();
     }
+    private void OnDestroy()
+    {
+        reloadAction.action.performed -= DoThing;
+    }
 
-	private void Update()
+    private void Update()
 	{
         IXRInteractable interactable = interactor.firstInteractableSelected;
 

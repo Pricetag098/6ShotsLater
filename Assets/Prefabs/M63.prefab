@@ -55,6 +55,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4229381821817527617, guid: 07cf492d0dd1b0d4dbf825c23f3e03f4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229381821817527619, guid: 07cf492d0dd1b0d4dbf825c23f3e03f4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229381821817527635, guid: 07cf492d0dd1b0d4dbf825c23f3e03f4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229381821817527637, guid: 07cf492d0dd1b0d4dbf825c23f3e03f4, type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229381821817527637, guid: 07cf492d0dd1b0d4dbf825c23f3e03f4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229381821817527639, guid: 07cf492d0dd1b0d4dbf825c23f3e03f4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229381821817527641, guid: 07cf492d0dd1b0d4dbf825c23f3e03f4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229381821817527643, guid: 07cf492d0dd1b0d4dbf825c23f3e03f4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229381821817527645, guid: 07cf492d0dd1b0d4dbf825c23f3e03f4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229381821817527647, guid: 07cf492d0dd1b0d4dbf825c23f3e03f4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229381821831682069, guid: 07cf492d0dd1b0d4dbf825c23f3e03f4, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7232667291994095304, guid: 07cf492d0dd1b0d4dbf825c23f3e03f4, type: 3}
       propertyPath: m_Name
       value: M63
