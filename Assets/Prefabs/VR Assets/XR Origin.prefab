@@ -70,7 +70,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4579200682781645105}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: af95ec8237eddb645a00c653c4826867, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -115,7 +115,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5822092512776239498}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: af95ec8237eddb645a00c653c4826867, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 8823208261154929301}
   - component: {fileID: 8823208261154929300}
   - component: {fileID: 8823208261154929303}
+  - component: {fileID: 1973397296}
   m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -300,10 +301,10 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -313,6 +314,23 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1973397296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8823208261154929290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 1a5f2414a39fce646a79606d97cb2e0e, type: 2}
 --- !u!1 &8823208261393235693
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,8 +512,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf8c7dc0e76f7f48bf9a2c4348b28d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 0}
-  maxVinette: 1
+  profile: {fileID: 11400000, guid: 1a5f2414a39fce646a79606d97cb2e0e, type: 2}
+  maxVinette: 0.8
   wavemanager: {fileID: 0}
   healthPerSecond: 0
 --- !u!1 &8823208261414973593
