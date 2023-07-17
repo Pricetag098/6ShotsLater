@@ -197,14 +197,20 @@ MonoBehaviour:
     enabled: 1
     value: 5
   minDamage: 50
-  cooldown: 1
   hitSound:
     enabled: 1
     value: {fileID: 8767719917736557369}
   breakSound:
     enabled: 0
     value: {fileID: 3289757312621654630}
+  breakParticle:
+    enabled: 0
+    value: {fileID: 0}
   dropOnBreak: 1
+  breakHapticDuration: 0.1
+  breakHapticStrength: 1
+  hitHapticDuration: 0.1
+  hitHapticStrength: 1
 --- !u!1 &2452405475988555649
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +255,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -399,7 +405,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
