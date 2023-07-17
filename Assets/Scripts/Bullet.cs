@@ -13,6 +13,8 @@ public class Bullet : MonoBehaviour
     MeshRenderer mr;
     //TrailRenderer tr;
     // Start is called before the first frame update
+
+     public Optional<Grenade> grenade;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -27,6 +29,11 @@ public class Bullet : MonoBehaviour
             timer += Time.deltaTime;
             if(timer > despawnDelay)
             {
+                Grenade g;
+                if (TryGetComponent(out g))
+                {
+                    return;
+                }
                 //tr.time = 0;
                 GetComponent<PooledObject>().Despawn();
             }
@@ -40,29 +47,50 @@ public class Bullet : MonoBehaviour
         rb.velocity = vel;
         transform.position = origin;
         despawning = false;
-        col.enabled = true;
-        mr.enabled = true;
-        rb.isKinematic = false;
+        if (grenade.Enabled)
+        {
+            grenade.Value.Spawn();
+            grenade.Value.ReleseTrigger();
+        }
+        else
+        {
+            col.enabled = true;
+            mr.enabled = true;
+            rb.isKinematic = false;
+        }
+        
         //tr.time = .1f;
         damage = dmg;
     }
 	private void LateUpdate()
 	{
-		if (despawning)
+        
+        if (despawning)
 		{
-            col.enabled = false;
-            mr.enabled = false;
-            rb.isKinematic = true;
+            if (grenade.Enabled)
+            {
+                
+                //grenade.Value.Despawn();
+            }
+            else
+            {
+                col.enabled = false;
+                mr.enabled = false;
+                rb.isKinematic = true;
+            }
+            
         }
 	}
 
 	private void OnCollisionEnter(Collision collision)
     {
+        
         if (despawning)
 		{
             return;
         }
-            
+        
+
         //Debug.Log("Hit" + collision.collider.gameObject.name, collision.collider.gameObject);
         HitBox hitBox = collision.collider.GetComponent<HitBox>();
         if(hitBox != null)

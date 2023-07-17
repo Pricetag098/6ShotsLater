@@ -109,6 +109,6 @@ public class Gun : MonoBehaviour
     {
         ammoLeft = maxAmmo;
         reloading = false;
-        
+        // pee pee poo poo
     }
 }

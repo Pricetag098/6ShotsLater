@@ -58,15 +58,31 @@ public class Grenade : MonoBehaviour
         if(particle.Enabled)
         particle.Value.Play();
         explodeSound.Play();
-        body.SetActive(false);
+        Despawn();
+        
+    }
+
+    public void Spawn()
+    {
+        enabled = true;
+        body.SetActive(true);
         GetComponent<Rigidbody>().isKinematic = false;
-        GetComponent<XRGrabInteractable>().enabled = false;
-        enabled = false;
+        GetComponent<XRGrabInteractable>().enabled = true;
+        cooking = false;
+        time = 0;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (explodeOnImpact)
+        if (explodeOnImpact && cooking)
             Explode();
+    }
+
+    public void Despawn()
+    {
+        body.SetActive(false);
+        GetComponent<Rigidbody>().isKinematic = true;
+        GetComponent<XRGrabInteractable>().enabled = false;
+        enabled = false;
     }
 }

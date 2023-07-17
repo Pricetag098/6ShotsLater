@@ -29,6 +29,7 @@ public class Health : MonoBehaviour
         if(health <= 0)
 		{
             Die();
+            // pee poo poop peed
 		}
     }
 
