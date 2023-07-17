@@ -16,6 +16,7 @@ public class Grenade : MonoBehaviour
     [SerializeField] SoundPlayer explodeSound;
     [SerializeField] SoundPlayer cookSound;
     [SerializeField] GameObject body;
+    [SerializeField] bool explodeOnImpact;
    
     public void ReleseTrigger()
     {
@@ -28,7 +29,7 @@ public class Grenade : MonoBehaviour
     }
     private void Update()
     {
-        if (cooking)
+        if (cooking && !explodeOnImpact)
         {
             time += Time.deltaTime;
             if(time > timer)
@@ -61,5 +62,11 @@ public class Grenade : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = false;
         GetComponent<XRGrabInteractable>().enabled = false;
         enabled = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (explodeOnImpact)
+            Explode();
     }
 }

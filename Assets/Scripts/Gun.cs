@@ -67,6 +67,11 @@ public class Gun : MonoBehaviour
                     Vector2 randVal = Random.insideUnitCircle * bulletSpreadDegrees;
                     Vector3 dir = Quaternion.Euler(randVal.x, randVal.y, 0) * transform.forward;
                     b.Shoot(dir * bulletSpeed, origin.position, damage);
+                    Grenade g;
+                    if(b.TryGetComponent(out g))
+                    {
+                        g.ReleseTrigger();
+                    }
                 }
                 ammoLeft--;
                 fireTimer = fireCoolDown;
