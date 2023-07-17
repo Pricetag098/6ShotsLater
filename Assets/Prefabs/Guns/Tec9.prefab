@@ -366,20 +366,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6851642484840512048, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
       propertyPath: clips.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6851642484840512048, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
       propertyPath: clips.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 8af8fa6773eac904cb2a170f6de22834, type: 3}
+      objectReference: {fileID: 8300000, guid: a989657a6e1b5f94aa38ba7011dbb1e6, type: 3}
     - target: {fileID: 6851642484840512048, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
       propertyPath: clips.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 9db34a675b0119644a277d8eb9643967, type: 3}
+      objectReference: {fileID: 8300000, guid: dd816c197849d444c910563505fe81e0, type: 3}
     - target: {fileID: 6851642484840512048, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
       propertyPath: clips.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 7ee18ae8e37d8d140b42496dd82255b6, type: 3}
+      objectReference: {fileID: 8300000, guid: edd1beeda2489da4db860ac2d032575d, type: 3}
+    - target: {fileID: 6851642484840512048, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
+      propertyPath: clips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: da5bd6146489a194b85124b6bfe86694, type: 3}
     - target: {fileID: 9099592001470663247, guid: 8636e854d805c0944bd4f4838de26e21, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0608

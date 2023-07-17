@@ -414,14 +414,20 @@ MonoBehaviour:
     enabled: 0
     value: 0
   minDamage: 20
-  cooldown: 1
   hitSound:
     enabled: 1
     value: {fileID: 5656003817356806208}
   breakSound:
     enabled: 0
     value: {fileID: 0}
+  breakParticle:
+    enabled: 0
+    value: {fileID: 0}
   dropOnBreak: 1
+  breakHapticDuration: 0.1
+  breakHapticStrength: 1
+  hitHapticDuration: 0.1
+  hitHapticStrength: 1
 --- !u!1 &6851642484023763754
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +570,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playOnAwake: 0
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 77d663700aea2fa48b2c1d742480709d, type: 3}
+  - {fileID: 8300000, guid: 63c8bab14d74cef4ab8457b882590afd, type: 3}
+  - {fileID: 8300000, guid: 9ef3362cf18d971458a79d19f9cb90dd, type: 3}
   pitchRange: 0
   basePitch: 1
 --- !u!1 &6851642484120750768
@@ -740,7 +749,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playOnAwake: 0
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 2115303bbf9cdeb49b0a38463003e583, type: 3}
+  - {fileID: 8300000, guid: 541148d78391b5a45a3c2834f5c027cf, type: 3}
+  - {fileID: 8300000, guid: 3f9f50d214ff61d499661a54108eb3b4, type: 3}
   pitchRange: 0
   basePitch: 1
 --- !u!1 &6851642484840512051

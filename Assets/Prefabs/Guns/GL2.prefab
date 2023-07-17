@@ -288,6 +288,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1258593cd6cc96e49894d188a917a504, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 482e9e3837b5d9e4cbbbdd91bd8c688e, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 1258593cd6cc96e49894d188a917a504, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5df014f34a4c8b8459fae6bd4ae17f5d, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 1258593cd6cc96e49894d188a917a504, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae006d4e150749f45ad048ce3d2f9cb1, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 1258593cd6cc96e49894d188a917a504, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: -6617736126942758989, guid: fafef3ff194c1b141bf758877577f778, type: 3}
+    - target: {fileID: -7511558181221131132, guid: 1258593cd6cc96e49894d188a917a504, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: a67f6e0925ea70f4b8c9cef9a4186779, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 1258593cd6cc96e49894d188a917a504, type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: -6617736126942758989, guid: fafef3ff194c1b141bf758877577f778, type: 3}
+    - target: {fileID: -7511558181221131132, guid: 1258593cd6cc96e49894d188a917a504, type: 3}
+      propertyPath: m_Materials.Array.data[6]
+      value: 
+      objectReference: {fileID: -6617736126942758989, guid: 81b31bc6e265fa4479b4ae5679f76342, type: 3}
     - target: {fileID: 919132149155446097, guid: 1258593cd6cc96e49894d188a917a504, type: 3}
       propertyPath: m_Name
       value: TimedGrenadeLauncher
