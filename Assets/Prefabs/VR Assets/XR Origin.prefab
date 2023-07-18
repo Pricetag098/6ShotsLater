@@ -364,8 +364,8 @@ Transform:
   m_GameObject: {fileID: 8823208261393235693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -4.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8823208261733289685}
   - {fileID: 1548163827}
@@ -472,6 +472,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   speed: 1.5
+  rotspeed: 50
 --- !u!114 &5003039002455328644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,7 +516,7 @@ MonoBehaviour:
   profile: {fileID: 11400000, guid: 1a5f2414a39fce646a79606d97cb2e0e, type: 2}
   maxVinette: 0.8
   wavemanager: {fileID: 0}
-  healthPerSecond: 0
+  healthPerSecond: 5
 --- !u!1 &8823208261414973593
 GameObject:
   m_ObjectHideFlags: 0

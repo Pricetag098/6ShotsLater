@@ -13,7 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] InputActionProperty rotate;
 
     [SerializeField] float speed;
-    
+    [SerializeField] float rotspeed = 1;
+
     Vector2 inputDir;
     Rigidbody rb;
     // Start is called before the first frame update
@@ -41,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         capsuleCollider.center = new Vector3(cam.localPosition.x, Mathf.Lerp(0,cam.localPosition.y,.5f), cam.localPosition.z);
         inputDir = move.action.ReadValue<Vector2>();
         float a = rotate.action.ReadValue<Vector2>().x;
-        transform.RotateAround(cam.position, Vector3.up, a);
+        transform.RotateAround(cam.position, Vector3.up, a * Time.deltaTime * rotspeed);
     }
 
     private void FixedUpdate()
