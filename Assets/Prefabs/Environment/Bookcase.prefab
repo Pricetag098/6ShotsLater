@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 7061337684015884787}
   - component: {fileID: 6219808237124298326}
   - component: {fileID: 8193672708748694172}
+  - component: {fileID: 1488748077220764516}
+  - component: {fileID: 8175740163956793340}
+  - component: {fileID: 3753892025811271995}
   m_Layer: 0
   m_Name: Bookcase
   m_TagString: Untagged
@@ -83,3 +86,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1488748077220764516
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7689115275016860489}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.016216638, y: 0.0034194302, z: 0.06347955}
+  m_Center: {x: -0.000026597096, y: 0.033445414, z: 0}
+--- !u!65 &8175740163956793340
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7689115275016860489}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.016216638, y: 0.0035250403, z: 0.06347955}
+  m_Center: {x: -0.000026597096, y: 0.047382582, z: 0}
+--- !u!65 &3753892025811271995
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7689115275016860489}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.016216638, y: 0.01954479, z: 0.06347955}
+  m_Center: {x: -0.000026597096, y: 0.009772395, z: 0}
