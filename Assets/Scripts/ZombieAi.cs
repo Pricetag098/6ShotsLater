@@ -76,6 +76,7 @@ public class ZombieAi : MonoBehaviour
     public void Kill()
     {
         agent.enabled = false;
+        wavemanager.AddKill();
     }
     public void ResetZombie()
     {

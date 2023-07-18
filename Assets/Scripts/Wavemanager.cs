@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Wavemanager : MonoBehaviour
 {
     public Transform player;
     public Health playerHealth;
     //public int waveNo = 0;
-    int waveIndex = 0;
-    int kills = 0;
+    public int waveIndex = 0;
+    public int kills = 0;
     [Min(1)]
     public int waveChangeInterval = 1;
     SpawnPoint[] spawnPoints;
@@ -149,12 +150,15 @@ public class Wavemanager : MonoBehaviour
     void SpawnZombie(Wave.SpawnRequest.ZombieTypes type,float speed)
     {
         GameObject zomGo = zombiePools[type].Spawn();
-        SpawnPoint spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+        int spawnPointIndex = Random.Range(0, spawnPoints.Length);
+        Debug.Log(spawnPointIndex);
+        SpawnPoint spawnPoint = spawnPoints[spawnPointIndex];
 
-        zomGo.transform.position = spawnPoint.transform.position;
+        zomGo.GetComponent<NavMeshAgent>().Warp( spawnPoint.transform.position);
         //TODO add radius spawn
 
         ZombieAi zombieAi = zomGo.GetComponent<ZombieAi>();
+        
         zombieAi.Spawn(player,playerHealth,speed);
         currentWave.Add(zombieAi);
         zombieAi.wavemanager = this;
