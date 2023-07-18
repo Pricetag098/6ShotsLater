@@ -13,8 +13,9 @@ public class PlayerHealth : MonoBehaviour
     public Wavemanager wavemanager;
 
     [SerializeField] float healthPerSecond;
-
+    [SerializeField] CanvasGroup canvasGroup;
     bool dead = false;
+    AsyncOperation op;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,18 @@ public class PlayerHealth : MonoBehaviour
     private void Update()
     {
         health.TakeDmg(-healthPerSecond * Time.deltaTime);
+        if (dead)
+        {
+            canvasGroup.alpha += Time.deltaTime;
+            if(canvasGroup.alpha >= 1)
+            {
+                op.allowSceneActivation = true;
+            }
+        }
+        else
+        {
+            canvasGroup.alpha -= Time.deltaTime;
+        }
     }
 
     void OnHit()
@@ -48,7 +61,8 @@ public class PlayerHealth : MonoBehaviour
                 //float vinetteVal = 1 - (health.health / health.maxHealth);
                 vignette.intensity.value = 0;
             }
-            SceneManager.LoadSceneAsync(0);
+            op =  SceneManager.LoadSceneAsync(0);
+            op.allowSceneActivation = false;
             wavemanager.state = Wavemanager.States.dead;
             dead = true;
 
