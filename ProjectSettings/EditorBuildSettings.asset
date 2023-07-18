@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/JakeTest.unity
-    guid: 5b9e2e57bd36fb1409618b08c79525b3
+    path: Assets/Scenes/FinalLevel.unity
+    guid: 82479e39ae2c20d44adf3ce812c229ab
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8e939d5d3f80cf94c9f92708e1b5653d, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 29ea6dfe12a5d9047a2a4f51f236181f, type: 2}

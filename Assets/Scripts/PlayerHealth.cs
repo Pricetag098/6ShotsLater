@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        wavemanager = FindObjectOfType<Wavemanager>();
         health = GetComponent<Health>();
         health.OnHit += OnHit;
         health.OnDeath += Die;

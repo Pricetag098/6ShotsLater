@@ -76,7 +76,7 @@ public class ZombieAi : MonoBehaviour
     public void Kill()
     {
         agent.enabled = false;
-        wavemanager.AddKill();
+        
     }
     public void ResetZombie()
     {
@@ -84,7 +84,7 @@ public class ZombieAi : MonoBehaviour
         health.health = health.maxHealth;
         dead = true;
         GetComponent<PooledObject>().Despawn();
-
+        wavemanager.AddKill();
     }
     public void DealDamage()
     {
