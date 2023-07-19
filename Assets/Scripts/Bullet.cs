@@ -89,14 +89,20 @@ public class Bullet : MonoBehaviour
 		{
             return;
         }
-        
+
 
         //Debug.Log("Hit" + collision.collider.gameObject.name, collision.collider.gameObject);
-        HitBox hitBox = collision.collider.GetComponent<HitBox>();
-        if(hitBox != null)
+        ContactPoint point = collision.GetContact(0);
+        HitBox hitBox;
+        if(collision.collider.TryGetComponent(out hitBox))
 		{
             hitBox.OnHit(damage);
+            VfxSpawner.SpawnVfx(0, point.point, point.normal);
 		}
+		else
+		{
+            VfxSpawner.SpawnVfx(1, point.point, point.normal);
+        }
 
 
         despawning=true;

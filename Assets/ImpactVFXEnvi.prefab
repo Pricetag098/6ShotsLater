@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7bac3c6b149d94daf71bcb999df888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particle: {fileID: 0}
+  soundPlayer: {fileID: 0}
 --- !u!114 &2267407270015584790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,18 +229,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.6999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.6999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -278,7 +268,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 19800000, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
 --- !u!4 &6567425391588277337 stripped
 Transform:

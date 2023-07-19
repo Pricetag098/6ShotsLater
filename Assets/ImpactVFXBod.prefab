@@ -216,6 +216,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3816361509009214150}
     m_Modifications:
+    - target: {fileID: 3301717382295996091, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536508895571866470, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841924338398071463, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841924339755515503, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787146697146794704, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4787146697146794705, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -263,6 +283,26 @@ PrefabInstance:
     - target: {fileID: 4787146697146794734, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
       propertyPath: m_Name
       value: FX_BloodExplosion_AB
+      objectReference: {fileID: 0}
+    - target: {fileID: 5149255480717077844, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5671452224115831803, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618701209734807352, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492489904833838473, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626883421732216203, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
