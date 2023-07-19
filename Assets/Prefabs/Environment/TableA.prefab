@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1967080899685029023}
   - component: {fileID: 4370900591556059221}
   - component: {fileID: 9143953759483121021}
+  - component: {fileID: 5294240333714989975}
   m_Layer: 0
   m_Name: TableA
   m_TagString: Untagged
@@ -95,5 +96,18 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3480792, y: 0.8050639, z: 1.355504}
-  m_Center: {x: 0, y: 0.4003575, z: 0.00000062584877}
+  m_Size: {x: 1.3480792, y: 0.06, z: 1.355504}
+  m_Center: {x: 0, y: 0.77, z: 0.00000062584877}
+--- !u!65 &5294240333714989975
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2857659987076956544}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.83704764, y: 0.8050641, z: 0.8639059}
+  m_Center: {x: -0.0031684677, y: 0.4003591, z: 0.015412224}
