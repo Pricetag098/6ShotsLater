@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class VfxObject : MonoBehaviour
 {
-    ParticleSystem particle;
-    SoundPlayer soundPlayer;
+    [SerializeField]ParticleSystem particle;
+    [SerializeField]SoundPlayer soundPlayer;
 	PooledObject pooledObject;
 	private void Awake()
 	{
