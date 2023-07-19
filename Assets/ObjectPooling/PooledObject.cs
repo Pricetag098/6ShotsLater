@@ -6,11 +6,15 @@ public class PooledObject : MonoBehaviour
 {
 	public ObjectPooler origin;
 
+	public delegate void Action();
+	public Action OnDespawn;
 	/// <summary>
 	/// Despawns the object
 	/// </summary>
-    public void Despawn()
+	public void Despawn()
 	{
 		origin.Despawn(this);
+		if(OnDespawn != null)
+		OnDespawn();
 	}	
 }
