@@ -44,7 +44,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -54,7 +54,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -89,7 +89,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -142,7 +142,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playOnAwake: 0
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 6d7731adacc630049b040e96878134fb, type: 3}
+  - {fileID: 8300000, guid: ecec90423d8b6d941ab0af78b4f7230f, type: 3}
+  - {fileID: 8300000, guid: 6eb3aa35509c51d43849934228fb7e4b, type: 3}
+  - {fileID: 8300000, guid: 3b788072c4c71fa45a2617a6d2c38dd6, type: 3}
   pitchRange: 0
   basePitch: 1
 --- !u!1 &5043285763666986852
