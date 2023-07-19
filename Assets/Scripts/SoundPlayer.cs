@@ -38,4 +38,9 @@ public class SoundPlayer : MonoBehaviour
      
     }
 
+    public void Stop()
+	{
+        source.Stop();
+	}
+
 }

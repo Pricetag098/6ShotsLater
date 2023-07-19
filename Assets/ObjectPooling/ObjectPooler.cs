@@ -90,6 +90,14 @@ public class ObjectPooler : MonoBehaviour
         pool.Enqueue(pooledObject);
 	}
 
+    public void DespawnAll()
+	{
+        for(int i = activeObjects.Count - 1; i >= 0; i--)
+		{
+            activeObjects[i].Despawn();
+		}
+	}
+
     void RefillPool()
 	{
 		if (autoRefillPool)
@@ -103,6 +111,6 @@ public class ObjectPooler : MonoBehaviour
 		}
 	}
 
-
+	
 
 }
